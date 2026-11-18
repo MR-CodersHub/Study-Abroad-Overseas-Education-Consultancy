@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Student dashboard for Study Upbroad international education services." />
+  <title>Student Dashboard | Study Upbroad</title>
+  <link rel="icon" type="image/png" href="../assets/logo/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script>
+    (function () {
+      var theme = localStorage.getItem("sub_theme") || "light";
+      var direction = localStorage.getItem("sub_dir") || "ltr";
+      document.documentElement.setAttribute("data-theme", theme);
+      document.documentElement.setAttribute("dir", direction);
+      document.documentElement.setAttribute("lang", direction === "rtl" ? "ar" : "en");
+    })();
+  </script>
+</head>
+<body class="dashboard-body">
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <div class="dash-shell">
+    <aside class="dash-sidebar" id="dashSidebar" aria-label="Student navigation">
+      <a class="sidebar-brand" href="../index.html" aria-label="Study Upbroad home">
+        <img src="../assets/logo/logo.png" alt="Study Upbroad" />
+        <span class="sidebar-brand-text">
+          <span class="sidebar-brand-name">Study Upbroad</span>
+          <span class="sidebar-brand-tagline">Global Education</span>
+        </span>
+      </a>
+
+      <div class="sidebar-profile">
+        <div class="sidebar-avatar">AS</div>
+        <div class="sidebar-profile-info">
+          <span class="sidebar-profile-name">Ananya Sharma</span>
+          <span class="sidebar-profile-role">Student</span>
+          <span class="sidebar-profile-id">STU-2026-0148</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-section">
+          <span class="sidebar-section-label">Overview</span>
+          <button class="sidebar-nav-item active" type="button" data-section="dashboard">
+            <svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+            <span class="sidebar-nav-label">Dashboard</span>
+          </button>
+        </div>
+
+        <div class="sidebar-nav-section">
+          <span class="sidebar-section-label">My Study Journey</span>
+          <button class="sidebar-nav-item" type="button" data-section="profile"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-5.33 0-8 2.67-8 8h16c0-5.33-2.67-8-8-8z"/></svg><span class="sidebar-nav-label">My Profile</span></button>
+          <button class="sidebar-nav-item" type="button" data-section="universities"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm-7 9.09V17c0 2.21 3.13 4 7 4s7-1.79 7-4v-4.91l-7 3.82-7-3.82z"/></svg><span class="sidebar-nav-label">University Shortlist</span></button>
+          <button class="sidebar-nav-item" type="button" data-section="applications"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg><span class="sidebar-nav-label">Applications</span><span class="sidebar-nav-badge">3</span></button>
+          <button class="sidebar-nav-item" type="button" data-section="documents"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg><span class="sidebar-nav-label">Documents</span><span class="sidebar-nav-badge" id="pendingDocumentsBadge">3</span></button>
+          <button class="sidebar-nav-item" type="button" data-section="scholarships"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l9 5-9 5-9-5 9-5zm-7 8.09l7 3.89 7-3.89V16l-7 4-7-4v-5.91z"/></svg><span class="sidebar-nav-label">Scholarships</span></button>
+          <button class="sidebar-nav-item" type="button" data-section="visa"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg><span class="sidebar-nav-label">Visa Tracker</span></button>
+        </div>
+
+        <div class="sidebar-nav-section">
+          <span class="sidebar-section-label">Communication</span>
+          <button class="sidebar-nav-item" type="button" data-section="messages"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg><span class="sidebar-nav-label">Messages</span><span class="sidebar-nav-badge" id="unreadMessagesBadge">3</span></button>
+          <button class="sidebar-nav-item" type="button" data-section="appointments"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg><span class="sidebar-nav-label">Appointments</span></button>
+        </div>
+
+        <div class="sidebar-nav-section">
+          <span class="sidebar-section-label">Account</span>
+          <button class="sidebar-nav-item" type="button" data-section="settings"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.43 12.98c.04-.32.07-.65.07-.98s-.03-.66-.08-.98l2.11-1.65a.5.5 0 00.12-.64l-2-3.46a.5.5 0 00-.61-.22l-2.49 1a7.28 7.28 0 00-1.69-.98L14.5 2.42A.49.49 0 0014 2h-4a.49.49 0 00-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1a.49.49 0 00-.61.22l-2 3.46a.5.5 0 00.12.64l2.11 1.65c-.04.32-.08.65-.08.98s.03.66.08.98l-2.11 1.65a.5.5 0 00-.12.64l2 3.46c.12.22.37.31.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65A.49.49 0 0010 22h4c.24 0 .45-.17.49-.42l.38-2.65c.61-.25 1.17-.58 1.69-.98l2.49 1c.24.09.49 0 .61-.22l2-3.46a.5.5 0 00-.12-.64l-2.11-1.65zM12 15.5A3.5 3.5 0 1112 8a3.5 3.5 0 010 7.5z"/></svg><span class="sidebar-nav-label">Settings</span></button>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a class="sidebar-nav-item sidebar-back-link" href="../index.html"><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11H7.83l5.58-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg><span class="sidebar-nav-label">Back to Main Website</span></a>
+        <button class="sidebar-nav-item sidebar-signout" type="button" data-exit-demo><svg class="sidebar-nav-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 17l5-5-5-5v3H3v4h7v3zm9-14H9a2 2 0 00-2 2v2h2V5h10v14H9v-2H7v2a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2z"/></svg><span class="sidebar-nav-label">Sign Out / Exit Demo</span></button>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+      <header class="dash-header">
+        <div class="dash-header-left">
+          <button class="sidebar-toggle-btn" id="sidebarToggleBtn" type="button" aria-label="Open navigation">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+          </button>
+          <span class="dash-page-title" id="dashPageTitle">Overview</span>
+        </div>
+        <div class="dash-header-right">
+          <button class="dash-search-btn" type="button" aria-label="Search dashboard" onclick="document.querySelector('.dash-content').scrollIntoView({behavior:'smooth'})">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M9.5 3a6.5 6.5 0 014.18 11.49l5.42 5.41-1.41 1.41-5.41-5.42A6.5 6.5 0 119.5 3zm0 2a4.5 4.5 0 100 9 4.5 4.5 0 000-9z"/></svg>
+          </button>
+          <div class="dash-notifications">
+            <button class="dash-notif-btn" id="dashNotifBtn" type="button" aria-label="Notifications">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 22a2.5 2.5 0 002.45-2h-4.9A2.5 2.5 0 0012 22zm7-6v-5a7 7 0 00-5.5-6.85V3a1.5 1.5 0 00-3 0v1.15A7 7 0 005 11v5l-2 2v1h18v-1l-2-2z"/></svg>
+              <span class="dash-notif-dot" id="dashNotifBadge">3</span>
+            </button>
+            <div class="dash-notif-dropdown" id="dashNotifDropdown">
+              <div class="dash-notif-header"><span class="dash-notif-title">Notifications</span><button class="dash-notif-mark-all" id="markAllReadBtn" type="button">Mark all read</button></div>
+              <div class="dash-notif-list" id="dashNotifList"></div>
+            </div>
+          </div>
+          <button class="dash-ctrl-btn" id="dashThemeToggle" type="button" aria-label="Toggle theme">
+            <svg class="dash-sun-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 18a6 6 0 100-12 6 6 0 000 12zm0-14V1h-1v3h1zm0 16v3h-1v-3h1zM4.22 5.64l-2.12-2.12-.71.71 2.12 2.12.71-.71zm15.56 12.72l2.12 2.12.71-.71-2.12-2.12-.71.71zM1 13h3v-1H1v1zm19-1v1h3v-1h-3zM3.51 18.49l2.13-2.12-.71-.71-2.13 2.12.71.71zm15.56-12.98l.71-.71-2.12-2.12-.71.71 2.12 2.12z"/></svg>
+            <svg class="dash-moon-icon" style="display:none" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.2 15.4A9 9 0 018.6 3.8 9 9 0 1020.2 15.4z"/></svg>
+          </button>
+          <button class="dash-ctrl-btn" id="dashDirToggle" type="button" aria-label="Toggle text direction">LTR</button>
+          <div class="dash-header-avatar">
+            <button class="dash-avatar-btn" id="dashAvatarBtn" type="button" aria-label="Open profile menu">
+              <span class="dash-avatar-circle">AS</span><span class="dash-avatar-name">Ananya</span>
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true"><path d="M7 10l5 5 5-5H7z"/></svg>
+            </button>
+            <div class="dash-avatar-dropdown" id="dashAvatarDropdown">
+              <div class="dash-avatar-dropdown-header"><span class="dash-avatar-dropdown-name">Ananya Sharma</span><span class="dash-avatar-dropdown-role">Student</span></div>
+              <button class="dash-dropdown-item" type="button" data-avatar-section="profile">My Profile</button>
+              <button class="dash-dropdown-item" type="button" data-avatar-section="settings">Settings</button>
+              <a class="dash-dropdown-item" href="../index.html">Back to Main Website</a>
+              <div class="dash-dropdown-divider"></div>
+              <button class="dash-dropdown-item danger" type="button" data-exit-demo>Exit Demo</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="dash-content">
+        <section class="dash-section active" id="section-dashboard">
+          <div class="dash-welcome-card">
+            <span class="dash-welcome-eyebrow">Your education journey</span>
+            <h1 class="dash-welcome-heading">Welcome back, Ananya.</h1>
+            <p class="dash-welcome-text">Your overseas education plan is moving forward. Review your next actions and stay on top of applications, documents, and appointments.</p>
+            <button class="dash-welcome-btn" id="exploreUnisBtn" type="button">Explore your shortlist</button>
+          </div>
+
+          <div class="dash-stats-grid">
+            <article class="dash-stat-card"><span class="dash-stat-label">Universities</span><strong class="dash-stat-value" id="statUni">4</strong></article>
+            <article class="dash-stat-card"><span class="dash-stat-label">Applications</span><strong class="dash-stat-value" id="statApps">3</strong></article>
+            <article class="dash-stat-card"><span class="dash-stat-label">Documents</span><strong class="dash-stat-value" id="statDocs">8 / 10</strong></article>
+            <article class="dash-stat-card"><span class="dash-stat-label">Overall progress</span><strong class="dash-stat-value" id="statProgress">68%</strong></article>
+          </div>
+
+          <div class="dash-card dash-overview-journey">
+            <div class="dash-card-header"><h2 class="dash-card-title">Study journey</h2><button class="dash-btn dash-btn-outline dash-btn-sm" id="viewApplicationsBtn" type="button">View applications</button></div>
+            <div class="dash-card-body"><div class="journey-timeline" id="journeyTimeline"></div></div>
+          </div>
+        </section>
+
+        <section class="dash-section" id="section-profile">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Student account</span><h1 class="dash-section-title">My Profile</h1><p class="dash-section-subtitle">Keep your academic and contact details up to date.</p></div>
+          <div class="dash-card"><div class="dash-card-header"><div><span class="profile-avatar-large" id="profileHeaderInitials">AS</span></div><div><strong id="profileName">Ananya Sharma</strong><span id="profileId">STU-2026-0148</span></div></div>
+            <div class="dash-card-body">
+              <div class="profile-progress"><span>Profile completion</span><strong id="profileCompletionPct">78%</strong></div><div class="dash-progress-track"><div class="dash-progress-fill" id="profileCompletionBar"></div></div>
+              <form id="profileForm" class="dash-form-grid" onsubmit="return false">
+                <label class="dash-form-field">Full name<input class="dash-form-control" id="profileFullName" /></label>
+                <label class="dash-form-field">Email address<input class="dash-form-control" id="profileEmail" type="email" /></label>
+                <label class="dash-form-field">Mobile number<input class="dash-form-control" id="profileMobile" /></label>
+                <label class="dash-form-field">Qualification<input class="dash-form-control" id="profileQualification" /></label>
+                <label class="dash-form-field">Study level<input class="dash-form-control" id="profileStudyLevel" /></label>
+                <label class="dash-form-field">Destinations<input class="dash-form-control" id="profileDestinations" /></label>
+                <label class="dash-form-field">Interested course<input class="dash-form-control" id="profileCourse" /></label>
+                <label class="dash-form-field">Intake<input class="dash-form-control" id="profileIntake" /></label>
+              </form>
+              <div class="dash-form-actions"><button class="dash-btn dash-btn-primary" id="profileEditBtn" type="button">Edit profile</button><button class="dash-btn dash-btn-primary" id="profileSaveBtn" type="button" style="display:none">Save changes</button><button class="dash-btn dash-btn-outline" id="profileCancelBtn" type="button" style="display:none">Cancel</button></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="dash-section" id="section-universities">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Options</span><h1 class="dash-section-title">University Shortlist</h1><p class="dash-section-subtitle">Compare and manage your preferred institutions.</p></div>
+          <div class="dash-section-toolbar"><button class="dash-btn dash-btn-primary" id="addUniversityBtn" type="button">Add university</button></div>
+          <div class="universities-grid" id="universitiesGrid"></div>
+        </section>
+
+        <section class="dash-section" id="section-applications">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Applications</span><h1 class="dash-section-title">My Applications</h1><p class="dash-section-subtitle">Track submission status and pending actions.</p></div>
+          <div class="dash-card"><div class="dash-card-header"><div class="dash-table-tools"><input class="dash-form-control" id="appSearchInput" type="search" placeholder="Search applications" /><select class="dash-form-control" id="appFilterSelect"><option value="all">All statuses</option><option>Documents Pending</option><option>Under Review</option><option>Profile Evaluation</option></select></div></div><div class="dash-table-wrap"><table class="dash-table"><thead><tr><th>University</th><th>Course</th><th>Intake</th><th>Status</th><th>Applied</th><th>Details</th></tr></thead><tbody id="appTableBody"></tbody></table></div></div>
+        </section>
+
+        <section class="dash-section" id="section-documents">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Documents</span><h1 class="dash-section-title">My Documents</h1><p class="dash-section-subtitle">Upload and review your application documents.</p></div>
+          <div class="dash-card"><div class="dash-card-header"><h2 class="dash-card-title">Document checklist</h2><strong id="docProgressCount">8 / 10</strong></div><div class="dash-card-body"><div class="dash-progress-track"><div class="dash-progress-fill" id="docProgressBar"></div></div><div class="document-list" id="docList"></div></div></div>
+        </section>
+
+        <section class="dash-section" id="section-scholarships">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Funding</span><h1 class="dash-section-title">Scholarships</h1><p class="dash-section-subtitle">Explore sample funding opportunities for international students.</p></div>
+          <div class="scholarship-grid" id="schGrid"></div>
+        </section>
+
+        <section class="dash-section" id="section-visa">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Destination preparation</span><h1 class="dash-section-title">Visa Tracker</h1><p class="dash-section-subtitle">Follow the essential steps before you travel.</p></div>
+          <div class="dash-card"><div class="dash-card-body"><div class="visa-checklist" id="visaChecklist"></div></div></div>
+        </section>
+
+        <section class="dash-section" id="section-messages">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Counselor support</span><h1 class="dash-section-title">Messages</h1><p class="dash-section-subtitle">Communicate with your education counselor.</p></div>
+          <div class="dash-card message-card"><div class="message-history" id="msgHistory"></div><div class="message-compose"><textarea class="dash-form-control" id="msgInput" rows="2" placeholder="Write a message"></textarea><button class="dash-btn dash-btn-primary" id="msgSendBtn" type="button">Send</button></div></div>
+        </section>
+
+        <section class="dash-section" id="section-appointments">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Meetings</span><h1 class="dash-section-title">Appointments</h1><p class="dash-section-subtitle">View or request counselor consultations.</p></div>
+          <div id="aptContainer"></div>
+        </section>
+
+        <section class="dash-section" id="section-settings">
+          <div class="dash-page-header"><span class="dash-section-eyebrow">Preferences</span><h1 class="dash-section-title">Settings</h1><p class="dash-section-subtitle">Personalize your dashboard experience.</p></div>
+          <div class="settings-grid">
+            <div class="dash-card"><div class="dash-card-header"><h2 class="dash-card-title">Appearance</h2></div><div class="dash-card-body"><span class="settings-label">Theme</span><div class="settings-options"><button class="settings-theme-option" data-theme-opt="light" type="button">Light</button><button class="settings-theme-option" data-theme-opt="dark" type="button">Dark</button></div><span class="settings-label">Direction</span><div class="settings-options"><button class="settings-theme-option" data-dir-opt="ltr" type="button">LTR</button><button class="settings-theme-option" data-dir-opt="rtl" type="button">RTL</button></div></div></div>
+            <div class="dash-card"><div class="dash-card-header"><h2 class="dash-card-title">Notifications</h2></div><div class="dash-card-body"><label class="settings-toggle-row"><span>Email updates</span><input id="settingEmailUpdates" type="checkbox" /></label><label class="settings-toggle-row"><span>Application updates</span><input id="settingAppUpdates" type="checkbox" /></label><label class="settings-toggle-row"><span>Document reminders</span><input id="settingDocReminders" type="checkbox" /></label><label class="settings-toggle-row"><span>Message alerts</span><input id="settingMsgAlerts" type="checkbox" /></label></div></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="dash-modal-overlay" id="modal-confirmModal"><div class="dash-modal"><div class="dash-modal-header"><h2 class="dash-modal-title" id="confirmModalTitle">Confirm action</h2></div><div class="dash-modal-body"><p id="confirmModalMessage"></p></div><div class="dash-modal-footer"><button class="dash-btn dash-btn-outline" type="button" data-close-modal="confirmModal">Cancel</button><button class="dash-btn dash-btn-danger" id="confirmModalBtn" type="button">Confirm</button></div></div></div>
+  <div class="dash-modal-overlay" id="modal-addUniModal"><div class="dash-modal"><div class="dash-modal-header"><h2 class="dash-modal-title">Add university</h2><button class="dash-modal-close" type="button" data-close-modal="addUniModal">×</button></div><div class="dash-modal-body"><form id="addUniForm" class="dash-form-grid" onsubmit="return false"><label class="dash-form-field">University name<input class="dash-form-control" id="addUniName" /></label><label class="dash-form-field">Country<input class="dash-form-control" id="addUniCountry" /></label><label class="dash-form-field">Programme<input class="dash-form-control" id="addUniProgram" /></label><label class="dash-form-field">Intake<input class="dash-form-control" id="addUniIntake" /></label></form></div><div class="dash-modal-footer"><button class="dash-btn dash-btn-outline" type="button" data-close-modal="addUniModal">Cancel</button><button class="dash-btn dash-btn-primary" id="addUniSubmitBtn" type="button">Add university</button></div></div></div>
+  <div class="dash-modal-overlay" id="modal-uniModal"><div class="dash-modal"><div class="dash-modal-header"><h2 class="dash-modal-title" id="uniModalTitle"></h2><button class="dash-modal-close" type="button" data-close-modal="uniModal">×</button></div><div class="dash-modal-body"><span class="status-badge" id="uniModalStatusBadge"></span><p id="uniModalDesc"></p><dl class="modal-details"><dt>Country</dt><dd id="uniModalCountry"></dd><dt>Program</dt><dd id="uniModalProgram"></dd><dt>Intake</dt><dd id="uniModalIntake"></dd><dt>Ranking</dt><dd id="uniModalRanking"></dd><dt>Tuition</dt><dd id="uniModalTuition"></dd></dl></div></div></div>
+  <div class="dash-modal-overlay" id="modal-schModal"><div class="dash-modal"><div class="dash-modal-header"><h2 class="dash-modal-title" id="schModalTitle"></h2><button class="dash-modal-close" type="button" data-close-modal="schModal">×</button></div><div class="dash-modal-body"><p id="schModalDesc"></p><dl class="modal-details"><dt>Category</dt><dd id="schModalCategory"></dd><dt>Destination</dt><dd id="schModalDest"></dd><dt>Eligibility</dt><dd id="schModalElig"></dd><dt>Deadline</dt><dd id="schModalDeadline"></dd></dl></div></div></div>
+  <div class="dash-modal-overlay" id="modal-aptModal"><div class="dash-modal"><div class="dash-modal-header"><h2 class="dash-modal-title" id="aptModalType"></h2><button class="dash-modal-close" type="button" data-close-modal="aptModal">×</button></div><div class="dash-modal-body"><dl class="modal-details"><dt>Counselor</dt><dd id="aptModalCounselor"></dd><dt>Date</dt><dd id="aptModalDate"></dd><dt>Time</dt><dd id="aptModalTime"></dd><dt>Mode</dt><dd id="aptModalMode"></dd><dt>Topic</dt><dd id="aptModalTopic"></dd><dt>Note</dt><dd id="aptModalNote"></dd></dl></div></div></div>
+  <div class="dash-modal-overlay" id="modal-requestAptModal"><div class="dash-modal"><div class="dash-modal-header"><h2 class="dash-modal-title">Request consultation</h2><button class="dash-modal-close" type="button" data-close-modal="requestAptModal">×</button></div><div class="dash-modal-body"><form id="requestAptForm" class="dash-form-grid" onsubmit="return false"><label class="dash-form-field">Topic<input class="dash-form-control" id="aptTopic" /></label><label class="dash-form-field">Date<input class="dash-form-control" id="aptDate" type="date" /></label><label class="dash-form-field">Time<input class="dash-form-control" id="aptTime" type="time" /></label><label class="dash-form-field">Mode<select class="dash-form-control" id="aptMode"><option>Online</option><option>In person</option><option>Phone call</option></select></label></form></div><div class="dash-modal-footer"><button class="dash-btn dash-btn-outline" type="button" data-close-modal="requestAptModal">Cancel</button><button class="dash-btn dash-btn-primary" type="button" data-apt-submit>Request</button></div></div></div>
+  <div class="dash-modal-overlay" id="modal-rescheduleModal"><div class="dash-modal"><div class="dash-modal-header"><h2 class="dash-modal-title">Reschedule appointment</h2><button class="dash-modal-close" type="button" data-close-modal="rescheduleModal">×</button></div><div class="dash-modal-body"><div class="dash-form-grid"><label class="dash-form-field">New date<input class="dash-form-control" id="rescheduleDate" type="date" /></label><label class="dash-form-field">New time<input class="dash-form-control" id="rescheduleTime" type="time" /></label></div></div><div class="dash-modal-footer"><button class="dash-btn dash-btn-outline" type="button" data-close-modal="rescheduleModal">Cancel</button><button class="dash-btn dash-btn-primary" type="button" data-reschedule-submit>Reschedule</button></div></div></div>
+
+  <script src="js/dashboard-data.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

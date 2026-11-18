@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="About Study Upbroad – Learn about our mission, our team, and our commitment to helping students achieve their international education goals." />
+  <title>About Us – Study Upbroad | Your Global Education Partner</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/logo/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/about.css" />
+
+  <!-- Anti-FOUC: apply saved theme & direction before paint -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('sub_theme') || 'light';
+      var d = localStorage.getItem('sub_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('dir', d);
+      document.documentElement.setAttribute('lang', d === 'rtl' ? 'ar' : 'en');
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- =====================================================
+     NAVBAR — identical to Home 1 / Home 2
+     ===================================================== -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand" href="index.html" aria-label="Study Upbroad – Home">
+        <img class="brand-logo-icon" src="assets/logo/logo.png" alt="" width="48" height="48" />
+        <div class="brand-text">
+          <span class="brand-name">Study Upbroad</span>
+          <span class="brand-tagline">Global Education</span>
+        </div>
+      </a>
+
+      <!-- Hamburger -->
+      <button class="navbar-toggler" type="button" id="navToggler" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger-icon" id="hamburgerIcon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+
+      <!-- Collapsible Nav -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mx-auto" role="list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+          <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+
+        <!-- Mobile auth buttons -->
+        <div class="mobile-nav-footer d-lg-none">
+          <a href="#" class="mobile-login-btn">Login</a>
+          <a href="#" class="mobile-signup-btn">Sign Up</a>
+          <a href="contact.html#consultation" class="mobile-consult-btn">Book Consultation</a>
+        </div>
+
+        <!-- Mobile controls -->
+        <div class="mobile-controls d-lg-none">
+          <button class="nav-control-btn" id="mobileRtlToggle" aria-label="Toggle text direction">
+            <span class="rtl-btn-label" id="mobileRtlLabel">LTR</span>
+          </button>
+          <button class="nav-control-btn" id="mobileThemeToggle" aria-label="Toggle theme">
+            <svg id="mobileSunIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 001.061-1.06l-1.59-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 001.06 1.06l1.59-1.591a.75.75 0 00-1.061-1.06l-1.59 1.591z" />
+            </svg>
+            <svg id="mobileMoonIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"
+              style="display:none" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Desktop controls -->
+      <div class="navbar-controls d-none d-lg-flex">
+        <!-- RTL -->
+        <button class="nav-control-btn" id="rtlToggle" aria-label="Toggle LTR/RTL direction">
+          <span class="rtl-btn-label" id="rtlLabel">LTR</span>
+        </button>
+        <!-- Theme -->
+        <button class="nav-control-btn" id="themeToggle" aria-label="Toggle dark/light theme">
+          <svg id="sunIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path
+              d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 001.061-1.06l-1.59-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 001.06 1.06l1.59-1.591a.75.75 0 00-1.061-1.06l-1.59 1.591z" />
+          </svg>
+          <svg id="moonIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none"
+            aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+        <!-- Profile dropdown -->
+        <div class="profile-dropdown dropdown">
+          <button class="dropdown-toggle" id="profileDropdownBtn" data-bs-toggle="dropdown" aria-expanded="false"
+            aria-label="Profile menu">
+            <div class="profile-avatar">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path
+                  d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+              </svg>
+            </div>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdownBtn">
+            <li>
+              <a class="dropdown-item dropdown-item-login" href="#" role="menuitem">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z" />
+                </svg>
+                Login
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-signup" href="#" role="menuitem">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path
+                    d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+                Sign Up
+              </a>
+            </li>
+          </ul>
+
+          <!-- Book Consultation Button -->
+          <a href="contact.html#consultation" class="navbar-consult-btn" aria-label="Book a free consultation">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+            </svg>
+            <span>Book Consultation</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+  <!-- END NAVBAR -->
+
+
+  <main id="mainContent">
+
+    <!-- =====================================================
+       SECTION 1 — ABOUT HERO
+       ===================================================== -->
+    <section class="about-hero" id="aboutHero" aria-labelledby="aboutHeroTitle">
+      <!-- Background image -->
+      <img class="about-hero-bg"
+        src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2400&q=88"
+        alt="University campus with international students walking across a sunlit courtyard" width="2400" height="1600"
+        fetchpriority="high" decoding="async" />
+      <div class="about-hero-overlay" aria-hidden="true"></div>
+
+      <!-- Decorative shape -->
+      <div class="about-hero-arc" aria-hidden="true"></div>
+
+      <div class="about-hero-inner container">
+        <div class="row align-items-center min-vh-hero">
+          <div class="col-lg-7">
+            <div class="about-hero-copy">
+              <span class="about-hero-eyebrow">OUR STORY</span>
+              <h1 class="about-hero-title" id="aboutHeroTitle">
+                Helping Students Turn<br />
+                <span class="about-hero-accent">Global Dreams Into Reality.</span>
+              </h1>
+              <p class="about-hero-desc">
+                We believe international education opens doors to new opportunities, experiences, and possibilities. Our
+                goal is to guide students through every stage of their overseas education journey with clarity,
+                confidence, and personalized support.
+              </p>
+              <div class="about-hero-actions">
+                <a href="#companyOverview" class="about-btn-primary">
+                  <span>Discover Our Story</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="contact.html#consultation" class="about-btn-secondary">Book a Free Consultation</a>
+              </div>
+            </div>
+          </div>
+          <!-- Right side decorative panel -->
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="about-hero-panel" aria-hidden="true">
+              <div class="about-hero-panel-card">
+                <div class="about-panel-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 3L1 9l4 2.18V16h2v-3.82L9 13.5V17h1v-2.5l2 1.1L18 13.5V17h1v-3.5l4-2.18L12 3z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="about-panel-label">Personalized Guidance</div>
+                  <div class="about-panel-sub">Tailored to every student's goals</div>
+                </div>
+              </div>
+              <div class="about-hero-panel-card">
+                <div class="about-panel-icon about-panel-icon--gold">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="about-panel-label">25+ Destinations</div>
+                  <div class="about-panel-sub">Global study opportunities</div>
+                </div>
+              </div>
+              <div class="about-hero-panel-card">
+                <div class="about-panel-icon about-panel-icon--orange">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="about-panel-label">Student-First Approach</div>
+                  <div class="about-panel-sub">Your journey, your pace</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="about-hero-scroll" aria-hidden="true">
+        <div class="about-hero-scroll-line"></div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 2 — COMPANY OVERVIEW
+       ===================================================== -->
+    <section class="about-overview" id="companyOverview" aria-labelledby="overviewTitle">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <!-- Right: Content -->
+          <div class="col-lg-6 reveal-right order-lg-2">
+            <span class="section-eyebrow">WHO WE ARE</span>
+            <h2 class="section-title" id="overviewTitle">
+              More Than Guidance. A Partner in Your Global Education Journey.
+            </h2>
+            <p class="about-overview-lead">
+              Study Upbroad is an international education consultancy dedicated to supporting students who aspire to
+              pursue higher education abroad. We understand that the journey to studying internationally can feel
+              overwhelming — and we are here to make it clearer, manageable, and more confident.
+            </p>
+            <p class="about-overview-body">
+              From helping you explore international education opportunities and understand suitable destinations, to
+              identifying the right universities and courses, preparing your applications, discovering scholarship
+              options, and navigating visa and pre-departure requirements — we walk with you at every step.
+            </p>
+            <p class="about-overview-body">
+              Our approach is rooted in clarity, honest communication, and genuinely personalized guidance. We do not
+              believe in a one-size-fits-all process. Every student's background, aspirations, and circumstances are
+              different, and our support reflects that.
+            </p>
+
+            <!-- Value statements -->
+            <div class="about-overview-values">
+              <div class="about-overview-value-item">
+                <div class="about-value-dot" aria-hidden="true"></div>
+                <span>Student-focused guidance at every stage</span>
+              </div>
+              <div class="about-overview-value-item">
+                <div class="about-value-dot" aria-hidden="true"></div>
+                <span>Personalized education planning, not generic advice</span>
+              </div>
+              <div class="about-overview-value-item">
+                <div class="about-value-dot" aria-hidden="true"></div>
+                <span>Clear, honest communication throughout the journey</span>
+              </div>
+              <div class="about-overview-value-item">
+                <div class="about-value-dot" aria-hidden="true"></div>
+                <span>Support that continues beyond the application</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Left: Image + supporting elements -->
+          <div class="col-lg-6 reveal-left order-lg-1">
+            <div class="about-overview-visual">
+              <div class="about-overview-img-frame">
+                <img
+                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=85"
+                  alt="Students sharing ideas around a laptop on campus" loading="lazy"
+                  width="1000" height="750" class="about-overview-img" />
+                <div class="about-overview-img-deco" aria-hidden="true"></div>
+              </div>
+              <!-- Floating stat badge -->
+              <div class="about-overview-stat-badge" aria-label="Student satisfaction">
+                <div class="about-stat-badge-num">Student First</div>
+                <div class="about-stat-badge-label">Our core philosophy</div>
+              </div>
+              <!-- Supporting highlight -->
+              <div class="about-overview-highlight">
+                <div class="about-highlight-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="about-highlight-text">Informed decisions, not just applications</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 3 — MISSION & VISION
+       ===================================================== -->
+    <section class="about-mission" id="missionSection" aria-labelledby="missionTitle">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-eyebrow">OUR PURPOSE</span>
+          <h2 class="section-title" id="missionTitle">Driven by Purpose. Guided by Possibilities.</h2>
+          <p class="section-subtitle mx-auto">We make each international education decision clearer, more personal, and easier to move forward with.</p>
+        </div>
+
+        <!-- Mission & Vision panels -->
+        <div class="row g-4 mt-3">
+          <!-- Mission -->
+          <div class="col-lg-6 reveal delay-1">
+            <div class="about-mission-panel about-mission-panel--mission">
+              <div class="about-mission-panel-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                </svg>
+              </div>
+              <div class="about-mission-panel-label">Our Mission</div>
+              <h3 class="about-mission-panel-heading">What We Set Out to Do</h3>
+              <p class="about-mission-panel-text">
+                "To make international education guidance more accessible, transparent, and personalized by helping
+                students navigate their overseas education journey with confidence."
+              </p>
+              <div class="about-mission-panel-deco" aria-hidden="true"></div>
+            </div>
+          </div>
+          <!-- Vision -->
+          <div class="col-lg-6 reveal delay-2">
+            <div class="about-mission-panel about-mission-panel--vision">
+              <div class="about-mission-panel-icon about-mission-panel-icon--gold" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                </svg>
+              </div>
+              <div class="about-mission-panel-label about-mission-panel-label--gold">Our Vision</div>
+              <h3 class="about-mission-panel-heading">Where We Are Headed</h3>
+              <p class="about-mission-panel-text">
+                "To empower students to explore global learning opportunities, build meaningful international
+                experiences, and pursue a future without boundaries."
+              </p>
+              <div class="about-mission-panel-deco about-mission-panel-deco--gold" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-purpose-promises reveal" aria-label="How we put our purpose into practice">
+          <article class="about-purpose-promise">
+            <span class="about-purpose-promise-index" aria-hidden="true">01</span>
+            <div>
+              <h3>A plan that starts with you</h3>
+              <p>Your goals, strengths, and circumstances shape every recommendation.</p>
+            </div>
+          </article>
+          <article class="about-purpose-promise">
+            <span class="about-purpose-promise-index" aria-hidden="true">02</span>
+            <div>
+              <h3>Clear steps, honest advice</h3>
+              <p>Understand your options and what each next step involves.</p>
+            </div>
+          </article>
+          <article class="about-purpose-promise">
+            <span class="about-purpose-promise-index" aria-hidden="true">03</span>
+            <div>
+              <h3>Support beyond the offer</h3>
+              <p>Get thoughtful guidance as you prepare for the move ahead.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Values Strip -->
+        <div class="about-values-strip reveal">
+          <div class="about-values-strip-label">Our Core Values</div>
+          <div class="about-values-strip-items">
+            <div class="about-value-chip">
+              <div class="about-value-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+              </div>
+              <span>Student First</span>
+            </div>
+            <div class="about-value-chip">
+              <div class="about-value-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+              </div>
+              <span>Transparency</span>
+            </div>
+            <div class="about-value-chip">
+              <div class="about-value-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+              </div>
+              <span>Integrity</span>
+            </div>
+            <div class="about-value-chip">
+              <div class="about-value-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+              </div>
+              <span>Personalized Guidance</span>
+            </div>
+            <div class="about-value-chip">
+              <div class="about-value-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <span>Global Perspective</span>
+            </div>
+            <div class="about-value-chip">
+              <div class="about-value-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+              </div>
+              <span>Continuous Support</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 4 — JOURNEY / TIMELINE
+       ===================================================== -->
+    <section class="about-journey" id="journeySection" aria-labelledby="journeyTitle">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-eyebrow">OUR JOURNEY</span>
+          <h2 class="section-title" id="journeyTitle">Every Great Journey Begins With a Purpose.</h2>
+          <p class="section-subtitle mx-auto">From our founding purpose to where we are today — a consistent commitment
+            to helping students access international education.</p>
+        </div>
+
+        <!-- Desktop Horizontal Timeline -->
+        <div class="about-timeline-desktop" aria-hidden="false">
+          <div class="about-timeline-line" aria-hidden="true"></div>
+          <div class="about-timeline-items">
+
+            <div class="about-timeline-item reveal delay-1">
+              <div class="about-timeline-marker">
+                <div class="about-timeline-marker-dot"></div>
+                <div class="about-timeline-marker-label">[Year]</div>
+              </div>
+              <div class="about-timeline-card">
+                <div class="about-timeline-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+                </div>
+                <h3 class="about-timeline-card-title">The Beginning</h3>
+                <p class="about-timeline-card-desc">The consultancy was founded with a clear purpose: to make
+                  international education guidance more accessible and honest for students who had the ambition to study
+                  abroad but lacked a clear path forward.</p>
+              </div>
+            </div>
+
+            <div class="about-timeline-item reveal delay-2">
+              <div class="about-timeline-marker">
+                <div class="about-timeline-marker-dot"></div>
+                <div class="about-timeline-marker-label">[Year]</div>
+              </div>
+              <div class="about-timeline-card">
+                <div class="about-timeline-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg>
+                </div>
+                <h3 class="about-timeline-card-title">Building Trust</h3>
+                <p class="about-timeline-card-desc">As we guided more students through their international education
+                  journeys, our reputation for honest, student-focused support continued to grow — built on real
+                  relationships and genuine outcomes.</p>
+              </div>
+            </div>
+
+            <div class="about-timeline-item reveal delay-3">
+              <div class="about-timeline-marker">
+                <div class="about-timeline-marker-dot"></div>
+                <div class="about-timeline-marker-label">[Year]</div>
+              </div>
+              <div class="about-timeline-card">
+                <div class="about-timeline-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                </div>
+                <h3 class="about-timeline-card-title">Expanding Opportunities</h3>
+                <p class="about-timeline-card-desc">We broadened our knowledge of international destinations,
+                  universities, and education pathways — allowing us to offer students a wider range of options suited
+                  to their unique profiles and goals.</p>
+              </div>
+            </div>
+
+            <div class="about-timeline-item reveal delay-4">
+              <div class="about-timeline-marker">
+                <div class="about-timeline-marker-dot"></div>
+                <div class="about-timeline-marker-label">Today</div>
+              </div>
+              <div class="about-timeline-card">
+                <div class="about-timeline-card-icon about-timeline-card-icon--gold" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                </div>
+                <h3 class="about-timeline-card-title">Moving Forward</h3>
+                <p class="about-timeline-card-desc">Our commitment remains unchanged: to guide every student who comes
+                  to us with clarity, care, and confidence — from the first conversation to the first day of their
+                  international university journey.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Mobile Vertical Timeline -->
+        <div class="about-timeline-mobile">
+          <div class="about-timeline-mobile-item reveal">
+            <div class="about-timeline-mobile-marker">
+              <div class="about-timeline-mobile-dot"></div>
+              <div class="about-timeline-mobile-line"></div>
+            </div>
+            <div class="about-timeline-mobile-content">
+              <div class="about-timeline-mobile-year">[Year]</div>
+              <h3 class="about-timeline-card-title">The Beginning</h3>
+              <p class="about-timeline-card-desc">The consultancy was founded with a clear purpose: to make
+                international education guidance more accessible and honest for students who aspired to study abroad.
+              </p>
+            </div>
+          </div>
+          <div class="about-timeline-mobile-item reveal">
+            <div class="about-timeline-mobile-marker">
+              <div class="about-timeline-mobile-dot"></div>
+              <div class="about-timeline-mobile-line"></div>
+            </div>
+            <div class="about-timeline-mobile-content">
+              <div class="about-timeline-mobile-year">[Year]</div>
+              <h3 class="about-timeline-card-title">Building Trust</h3>
+              <p class="about-timeline-card-desc">Our reputation for honest, student-focused guidance continued to grow
+                through real relationships and genuine outcomes for students.</p>
+            </div>
+          </div>
+          <div class="about-timeline-mobile-item reveal">
+            <div class="about-timeline-mobile-marker">
+              <div class="about-timeline-mobile-dot"></div>
+              <div class="about-timeline-mobile-line"></div>
+            </div>
+            <div class="about-timeline-mobile-content">
+              <div class="about-timeline-mobile-year">[Year]</div>
+              <h3 class="about-timeline-card-title">Expanding Opportunities</h3>
+              <p class="about-timeline-card-desc">We broadened our knowledge of international destinations and
+                universities, giving students a wider range of carefully matched options.</p>
+            </div>
+          </div>
+          <div class="about-timeline-mobile-item reveal">
+            <div class="about-timeline-mobile-marker">
+              <div class="about-timeline-mobile-dot"></div>
+            </div>
+            <div class="about-timeline-mobile-content">
+              <div class="about-timeline-mobile-year">Today</div>
+              <h3 class="about-timeline-card-title">Moving Forward</h3>
+              <p class="about-timeline-card-desc">Guiding every student from first conversation to their first day
+                abroad — with clarity, care, and continued commitment.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 5 — WHY CHOOSE US
+       ===================================================== -->
+    <section class="about-why" id="whySection" aria-labelledby="whyTitle">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <!-- Left: Image -->
+          <div class="col-lg-5 reveal-left">
+            <div class="about-why-visual">
+              <img
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=85"
+                alt="Student receiving personalized education guidance from a professional advisor" loading="lazy"
+                width="1000" height="1200" class="about-why-img" />
+              <div class="about-why-img-accent" aria-hidden="true"></div>
+              <div class="about-why-quote-badge">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                </svg>
+                <span>Your goals deserve the right guidance</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Content grid -->
+          <div class="col-lg-7 reveal-right">
+            <span class="section-eyebrow">WHY STUDENTS CHOOSE US</span>
+            <h2 class="section-title" id="whyTitle">Your Goals Deserve the Right Guidance.</h2>
+            <p class="section-subtitle mb-4">We work alongside students — not just for them. Here is what makes our
+              approach different.</p>
+
+            <div class="about-why-grid">
+              <div class="about-why-item">
+                <div class="about-why-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-why-item-title">Personalized Guidance</h3>
+                  <p class="about-why-item-desc">Support based on each student's unique academic background, interests,
+                    and international aspirations.</p>
+                </div>
+              </div>
+
+              <div class="about-why-item">
+                <div class="about-why-item-icon about-why-item-icon--gold" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-why-item-title">Clear Planning</h3>
+                  <p class="about-why-item-desc">We help students understand each stage of their international
+                    education journey — clearly, without jargon or confusion.</p>
+                </div>
+              </div>
+
+              <div class="about-why-item">
+                <div class="about-why-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-why-item-title">Informed Decisions</h3>
+                  <p class="about-why-item-desc">Guidance to explore suitable universities, courses, and destinations
+                    that align with each student's profile.</p>
+                </div>
+              </div>
+
+              <div class="about-why-item">
+                <div class="about-why-item-icon about-why-item-icon--gold" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM12 19c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm1-9h-2V7h2v3z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-why-item-title">Application Support</h3>
+                  <p class="about-why-item-desc">Assistance with application requirements, documentation, and ensuring
+                    students present themselves effectively.</p>
+                </div>
+              </div>
+
+              <div class="about-why-item">
+                <div class="about-why-item-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-why-item-title">Financial Awareness</h3>
+                  <p class="about-why-item-desc">We help students explore available scholarships, funding options, and
+                    understand the financial aspects of studying abroad.</p>
+                </div>
+              </div>
+
+              <div class="about-why-item">
+                <div class="about-why-item-icon about-why-item-icon--gold" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-why-item-title">Continued Assistance</h3>
+                  <p class="about-why-item-desc">Guidance through visa preparation and pre-departure planning —
+                    so students leave feeling ready and prepared.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 6 — TEAM
+       ===================================================== -->
+    <section class="about-team" id="teamSection" aria-labelledby="teamTitle">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-eyebrow">THE PEOPLE BEHIND THE GUIDANCE</span>
+          <h2 class="section-title" id="teamTitle">Meet the People Who Support Your Journey.</h2>
+          <p class="section-subtitle mx-auto">Behind every successful student journey is a team committed to providing
+            guidance, encouragement, and thoughtful support.</p>
+        </div>
+
+        <div class="about-team-grid">
+
+          <article class="about-team-card reveal delay-1">
+            <div class="about-team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80"
+                alt="Portrait of Arjun Menon, founder and director" loading="lazy" width="400" height="480"
+                class="about-team-img" />
+              <div class="about-team-img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="about-team-info">
+              <div class="about-team-name">Arjun Menon</div>
+              <div class="about-team-role">Founder / Director</div>
+              <p class="about-team-desc">Leads the consultancy with a commitment to making international education
+                guidance more accessible and student-centred.</p>
+            </div>
+          </article>
+
+          <article class="about-team-card reveal delay-2">
+            <div class="about-team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80"
+                alt="Portrait of Nisha Kapoor, admissions counselor" loading="lazy" width="400" height="480"
+                class="about-team-img" />
+              <div class="about-team-img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="about-team-info">
+              <div class="about-team-name">Nisha Kapoor</div>
+              <div class="about-team-role">Admissions Counselor</div>
+              <p class="about-team-desc">Guides students through university selection, entry requirements, and
+                application preparation with clarity and care.</p>
+            </div>
+          </article>
+
+          <article class="about-team-card reveal delay-3">
+            <div class="about-team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
+                alt="Portrait of Daniel Otieno, student guidance advisor" loading="lazy" width="400" height="480"
+                class="about-team-img" />
+              <div class="about-team-img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="about-team-info">
+              <div class="about-team-name">Daniel Otieno</div>
+              <div class="about-team-role">Student Guidance Advisor</div>
+              <p class="about-team-desc">Supports students in exploring their options, understanding pathways, and
+                making confident decisions about their international education.</p>
+            </div>
+          </article>
+
+          <article class="about-team-card reveal delay-4">
+            <div class="about-team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80"
+                alt="Portrait of Meera Iyer, application support specialist" loading="lazy" width="400" height="480"
+                class="about-team-img" />
+              <div class="about-team-img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="about-team-info">
+              <div class="about-team-name">Meera Iyer</div>
+              <div class="about-team-role">Application Support Specialist</div>
+              <p class="about-team-desc">Assists students with application documentation, deadlines, and submission
+                requirements to ensure a thorough and well-prepared application.</p>
+            </div>
+          </article>
+
+          <article class="about-team-card reveal delay-5">
+            <div class="about-team-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
+                alt="Portrait of Samuel Adeyemi, visa documentation advisor" loading="lazy" width="400" height="480"
+                class="about-team-img" />
+              <div class="about-team-img-overlay" aria-hidden="true"></div>
+            </div>
+            <div class="about-team-info">
+              <div class="about-team-name">Samuel Adeyemi</div>
+              <div class="about-team-role">Visa Documentation Advisor</div>
+              <p class="about-team-desc">Provides clear guidance on visa documentation requirements and pre-departure
+                planning to help students prepare with confidence.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 7 — OUR APPROACH
+       ===================================================== -->
+    <section class="about-approach" id="approachSection" aria-labelledby="approachTitle">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-eyebrow">OUR APPROACH</span>
+          <h2 class="section-title" id="approachTitle">Personal Attention at Every Step.</h2>
+          <p class="section-subtitle mx-auto">From your first enquiry to preparing for life abroad — here is how we
+            work with you.</p>
+        </div>
+
+        <div class="about-approach-process">
+
+          <div class="about-approach-step reveal delay-1">
+            <div class="about-approach-step-num" aria-hidden="true">01</div>
+            <div class="about-approach-step-connector" aria-hidden="true"></div>
+            <div class="about-approach-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </div>
+            <h3 class="about-approach-step-title">Understand</h3>
+            <p class="about-approach-step-desc">We listen carefully to understand your goals, academic background,
+              interests, and preferences before anything else.</p>
+          </div>
+
+          <div class="about-approach-step reveal delay-2">
+            <div class="about-approach-step-num" aria-hidden="true">02</div>
+            <div class="about-approach-step-connector" aria-hidden="true"></div>
+            <div class="about-approach-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <h3 class="about-approach-step-title">Explore</h3>
+            <p class="about-approach-step-desc">We identify suitable destinations, courses, and university options that
+              align with your profile, budget, and academic aspirations.</p>
+          </div>
+
+          <div class="about-approach-step reveal delay-3">
+            <div class="about-approach-step-num" aria-hidden="true">03</div>
+            <div class="about-approach-step-connector" aria-hidden="true"></div>
+            <div class="about-approach-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+            </div>
+            <h3 class="about-approach-step-title">Plan</h3>
+            <p class="about-approach-step-desc">Together, we develop a clear and realistic application and preparation
+              plan — with timelines, priorities, and next steps.</p>
+          </div>
+
+          <div class="about-approach-step reveal delay-4">
+            <div class="about-approach-step-num" aria-hidden="true">04</div>
+            <div class="about-approach-step-connector" aria-hidden="true"></div>
+            <div class="about-approach-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13z"/></svg>
+            </div>
+            <h3 class="about-approach-step-title">Apply</h3>
+            <p class="about-approach-step-desc">We guide you through application requirements, documentation, and help
+              you present your best self to your chosen universities.</p>
+          </div>
+
+          <div class="about-approach-step reveal delay-5">
+            <div class="about-approach-step-num" aria-hidden="true">05</div>
+            <div class="about-approach-step-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3L3 10.53v.98l6.84 2.65L12.48 21h.98L21 3z"/></svg>
+            </div>
+            <h3 class="about-approach-step-title">Prepare</h3>
+            <p class="about-approach-step-desc">Support with scholarship exploration, visa preparation, and pre-departure
+              planning — so you leave feeling confident and ready.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 8 — TESTIMONIALS
+       ===================================================== -->
+    <section class="about-testimonials testimonials-section" id="testimonialsSection" aria-labelledby="aboutStoriesTitle">
+      <div class="container">
+        <div class="stories-header-row">
+          <div class="stories-header-left reveal-left">
+            <span class="section-eyebrow">STUDENT STORIES</span>
+            <h2 class="section-title" id="aboutStoriesTitle">Real journeys. Meaningful experiences.</h2>
+            <p class="section-subtitle mt-2 mb-0">Words from students who trusted us with their international education aspirations.</p>
+          </div>
+          <div class="stories-header-right reveal-right">
+            <div class="stories-nav-controls" role="group" aria-label="Testimonial navigation">
+              <button class="stories-nav-btn stories-prev-btn" id="aboutTestimonialPrev" type="button" aria-label="Previous story">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </button>
+              <button class="stories-nav-btn stories-next-btn" id="aboutTestimonialNext" type="button" aria-label="Next story">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 col-md-10 mx-auto">
+            <div class="student-visual-composition reveal-left" aria-label="International students sharing a campus moment">
+              <div class="deco-circle-main" aria-hidden="true"></div>
+              <div class="deco-circle-bubble deco-bubble-1" aria-hidden="true"></div>
+              <div class="deco-circle-bubble deco-bubble-2" aria-hidden="true"></div>
+              <div class="deco-circle-bubble deco-bubble-3" aria-hidden="true"></div>
+              <div class="deco-orbit-arc" aria-hidden="true"></div>
+              <div class="student-cutout-wrap">
+                <img class="student-cutout-img"
+                  src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&amp;fit=crop&amp;w=760&amp;q=85"
+                  alt="University students talking together on campus" width="760" height="900" loading="lazy" decoding="async" />
+              </div>
+              <svg class="student-loop-arrow" viewBox="0 0 160 80" fill="none" aria-hidden="true">
+                <path d="M25 20 C20 52, 45 68, 75 66 C100 64, 108 45, 95 32 C82 18, 62 32, 76 54 C92 72, 128 66, 146 36" stroke="#E87535" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M136 33 L147 34 L149 46" stroke="#E87535" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="stories-testimonial-wrap reveal-right">
+              <div class="stories-soft-aura" aria-hidden="true"></div>
+              <div class="stories-quote-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+              </div>
+              <svg class="visually-hidden" aria-hidden="true">
+                <symbol id="about-testimonial-star" viewBox="0 0 24 24">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+                </symbol>
+              </svg>
+              <div class="stories-slider-viewport" aria-live="polite">
+                <div class="stories-slider-track" id="aboutTestimonialTrack">
+                  <article class="testimonial-slide about-testimonial-slide active-slide" aria-label="Amara Osei's story">
+                    <blockquote class="story-review-text">“Study Upbroad turned what felt like an impossible dream into my everyday reality. Within 8 months I had my offer letter from the University of Manchester and my student visa. The team guided me through every document, every deadline and every doubt. I couldn't have done it without them.”</blockquote>
+                    <div class="story-author-details">
+                      <div class="story-author-name">Amara Osei</div>
+                      <div class="story-author-meta">MSc International Business · University of Manchester, United Kingdom</div>
+                      <div class="story-rating-stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg></div>
+                    </div>
+                  </article>
+                  <article class="testimonial-slide about-testimonial-slide" aria-label="Priya Nair's story">
+                    <blockquote class="story-review-text">“I had no idea where to begin — which country, which program, which university. Study Upbroad gave me clarity from day one. They helped me compare options across Canada and Australia, guided my SOP, and I ended up with a partial scholarship at UBC. Life-changing.”</blockquote>
+                    <div class="story-author-details">
+                      <div class="story-author-name">Priya Nair</div>
+                      <div class="story-author-meta">Bachelor of Computer Science · University of British Columbia, Canada</div>
+                      <div class="story-rating-stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg></div>
+                    </div>
+                  </article>
+                  <article class="testimonial-slide about-testimonial-slide" aria-label="Daniel Kimani's story">
+                    <blockquote class="story-review-text">“Germany was my dream — tuition-free engineering at TU Munich. Everyone told me it was too complicated. Study Upbroad made it manageable. They knew every requirement, helped with my German language prep and I am now in my second semester. Forever grateful.”</blockquote>
+                    <div class="story-author-details">
+                      <div class="story-author-name">Daniel Kimani</div>
+                      <div class="story-author-meta">MEng Mechanical Engineering · Technical University of Munich, Germany</div>
+                      <div class="story-rating-stars" role="img" aria-label="5 out of 5 stars"><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg><svg><use href="#about-testimonial-star"></use></svg></div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="stories-dots-wrap about-testimonials-dots" id="aboutTestimonialDots" role="group" aria-label="Choose a student story"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 9 — GLOBAL EDUCATION PERSPECTIVE
+       ===================================================== -->
+    <section class="about-global" id="globalSection" aria-labelledby="globalTitle">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <!-- Left: Content -->
+          <div class="col-lg-6 reveal-left">
+            <span class="section-eyebrow">A WORLD OF OPPORTUNITIES</span>
+            <h2 class="section-title" id="globalTitle">Education Has the Power to Take You Further.</h2>
+            <p class="about-global-lead">
+              International education offers students more than a qualification. It opens the door to new ways of
+              thinking, broader networks, and experiences that shape who you become.
+            </p>
+
+            <div class="about-global-features">
+              <div class="about-global-feature">
+                <div class="about-global-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-global-feature-title">Global Academic Environments</h3>
+                  <p class="about-global-feature-desc">Experience world-class learning environments and educational
+                    systems across diverse international universities.</p>
+                </div>
+              </div>
+
+              <div class="about-global-feature">
+                <div class="about-global-feature-icon about-global-feature-icon--gold" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-global-feature-title">Diverse Perspectives</h3>
+                  <p class="about-global-feature-desc">Learn alongside students from around the world and gain insights
+                    that cross cultural and disciplinary boundaries.</p>
+                </div>
+              </div>
+
+              <div class="about-global-feature">
+                <div class="about-global-feature-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.35C18 2.54 15.96.5 13.45.5c-1.3 0-2.51.56-3.36 1.5L9 3.26 7.91 2C7.06 1.06 5.85.5 4.55.5 2.04.5 0 2.54 0 4.65c0 .47.11.91.18 1.35H0c-1.1 0-2 .9-2 2v3c0 1.1.9 1.99 2 1.99L0 20c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-7.01c1.1 0 2-.89 2-1.99V8c0-1.1-.9-2-2-2z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-global-feature-title">Personal Development</h3>
+                  <p class="about-global-feature-desc">Build independence, resilience, and adaptability — qualities
+                    that remain valuable long after graduation.</p>
+                </div>
+              </div>
+
+              <div class="about-global-feature">
+                <div class="about-global-feature-icon about-global-feature-icon--gold" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                </div>
+                <div>
+                  <h3 class="about-global-feature-title">International Networks</h3>
+                  <p class="about-global-feature-desc">Build professional and personal connections that span continents
+                    — a network that serves you throughout your career.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Image mosaic -->
+          <div class="col-lg-6 reveal-right">
+            <div class="about-global-mosaic">
+              <div class="about-global-mosaic-main">
+                <img
+                  src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=900&q=85"
+                  alt="A welcoming university library filled with study spaces" loading="lazy" width="900"
+                  height="600" class="about-global-img" />
+              </div>
+              <div class="about-global-mosaic-secondary">
+                <div class="about-global-mosaic-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80"
+                    alt="Students studying in a modern university library" loading="lazy" width="600" height="400"
+                    class="about-global-img" />
+                </div>
+                <div class="about-global-mosaic-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-1627556704302-624286467c65?auto=format&fit=crop&w=600&q=80"
+                    alt="Graduation ceremony at an international university" loading="lazy" width="600" height="400"
+                    class="about-global-img" />
+                </div>
+              </div>
+              <div class="about-global-mosaic-arc" aria-hidden="true"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 10 — FINAL CTA
+       ===================================================== -->
+    <section class="about-cta" id="aboutCta" aria-label="Call to action">
+      <div class="about-cta-bg-img" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?auto=format&fit=crop&w=2000&q=80"
+          alt="" width="2000" height="1200" loading="lazy" />
+      </div>
+      <div class="about-cta-overlay" aria-hidden="true"></div>
+      <div class="container about-cta-inner">
+        <div class="about-cta-content reveal">
+          <div class="about-cta-badge" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+            </svg>
+            <span>YOUR GLOBAL EDUCATION JOURNEY STARTS HERE</span>
+          </div>
+          <h2 class="about-cta-title">
+            Let's Make Your Global Education<br />
+            <span class="about-cta-title-accent">Dream a Plan.</span>
+          </h2>
+          <p class="about-cta-desc">
+            Every international education journey starts with a conversation. Connect with our team and take the first
+            step toward discovering the opportunities waiting for you.
+          </p>
+          <div class="about-cta-buttons">
+            <a href="contact.html#consultation" class="about-cta-btn-primary">
+              <span>Book a Free Consultation</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="services.html" class="about-cta-btn-secondary">Explore Our Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+     FOOTER — identical to Home 1
+     ===================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Brand -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <div class="footer-brand-lockup">
+              <img class="brand-logo-icon footer-brand-logo" src="assets/logo/logo.png" alt="" width="48" height="48" />
+              <div>
+                <div class="brand-name">Study Upbroad</div>
+                <div class="brand-tagline">Global Education Consultancy</div>
+              </div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">Your trusted partner in international education. We guide students from first
+            dream to final destination across 25+ study destinations worldwide.</p>
+          <div class="footer-social" role="list" aria-label="Social media">
+            <a href="#" class="social-icon-link" aria-label="Facebook" role="listitem"><svg viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg></a>
+            <a href="#" class="social-icon-link" aria-label="Instagram" role="listitem"><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+              </svg></a>
+            <a href="#" class="social-icon-link" aria-label="LinkedIn" role="listitem"><svg viewBox="0 0 24 24">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg></a>
+            <a href="#" class="social-icon-link" aria-label="YouTube" role="listitem"><svg viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg></a>
+            <a href="#" class="social-icon-link" aria-label="X / Twitter" role="listitem"><svg viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Destinations -->
+        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+          <h3 class="footer-heading">Destinations</h3>
+          <ul class="footer-links">
+            <li><a href="#">United Kingdom</a></li>
+            <li><a href="#">United States</a></li>
+            <li><a href="#">Canada</a></li>
+            <li><a href="#">Australia</a></li>
+            <li><a href="#">Germany</a></li>
+            <li><a href="#">Ireland</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-links">
+            <li><a href="#">Profile Evaluation</a></li>
+            <li><a href="#">University Selection</a></li>
+            <li><a href="#">Application Help</a></li>
+            <li><a href="#">Scholarship Guidance</a></li>
+            <li><a href="#">Visa Assistance</a></li>
+            <li><a href="#">Pre-Departure Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-2 col-md-3 col-sm-6 col-6">
+          <h3 class="footer-heading">Contact Us</h3>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg></div>
+            <div class="footer-contact-text"><strong>Address</strong>123 Education Lane, City</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg viewBox="0 0 24 24">
+                <path
+                  d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+              </svg></div>
+            <div class="footer-contact-text"><strong>Email</strong>hello@studyupbroad.com</div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon"><svg viewBox="0 0 24 24">
+                <path
+                  d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg></div>
+            <div class="footer-contact-text"><strong>Phone</strong>+1 (800) 123-4567</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Newsletter -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="newsletter-section">
+            <div class="row align-items-center g-3">
+              <div class="col-lg-5">
+                <h4 class="footer-heading" style="margin-bottom:0.5rem;">Stay Informed</h4>
+                <p class="newsletter-desc mb-0">Get the latest study abroad opportunities, scholarship alerts and
+                  education tips straight to your inbox.</p>
+              </div>
+              <div class="col-lg-7">
+                <form id="newsletterForm" class="newsletter-form" novalidate>
+                  <div class="input-group">
+                    <input type="email" class="form-control" id="newsletterEmail"
+                      placeholder="Enter your email address" aria-label="Email address" required />
+                    <button class="newsletter-submit-btn" type="submit" id="newsletterSubmitBtn">Subscribe</button>
+                  </div>
+                  <div class="newsletter-message" id="newsletterMessage" role="alert" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="footer-bottom-text mb-0">&copy; <span id="footerYear">2026</span> Study Upbroad. All rights
+              reserved.</p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+  <!-- END FOOTER -->
+
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/about.js"></script>
+
+</body>
+
+</html>

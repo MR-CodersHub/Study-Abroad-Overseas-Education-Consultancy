@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Create a Study Upbroad demo profile to explore the registration flow." />
+  <title>Sign Up | Study Upbroad</title>
+  <link rel="icon" type="image/png" href="assets/logo/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/signup.css" />
+  <script>
+    (function () {
+      var theme = localStorage.getItem('sub_theme') || 'light';
+      var direction = localStorage.getItem('sub_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('dir', direction);
+      document.documentElement.setAttribute('lang', direction === 'rtl' ? 'ar' : 'en');
+    })();
+  </script>
+</head>
+<body class="auth-page signup-page">
+  <a class="signup-skip-link" href="#signupForm">Skip to create account</a>
+  <main class="signup-layout" id="mainContent">
+    <section class="signup-form-column" aria-labelledby="signupHeading">
+      <header class="signup-topbar">
+        <a class="signup-brand" href="index.html" aria-label="Study Upbroad home">
+          <img src="assets/logo/logo.png" alt="" width="46" height="46" />
+          <span>Study Upbroad</span>
+        </a>
+        <a class="signup-home-button" href="index.html">Back to home</a>
+      </header>
+
+      <div class="signup-content">
+        <p class="signup-eyebrow">CREATE YOUR PROFILE</p>
+        <h1 id="signupHeading">Start with your study plans.</h1>
+        <p class="signup-intro">A few details help shape your next steps.</p>
+        <p class="signup-demo-note" role="note">Demo only. Email and social sign-in are not connected. Your details are not saved or sent.</p>
+
+        <form id="signupForm" class="signup-form" novalidate>
+          <div class="social-auth signup-field-wide">
+            <div class="social-auth-buttons">
+              <button class="social-provider-button" type="button" data-social-provider="Google" aria-describedby="signupSocialStatus">
+                <img src="https://cdn.simpleicons.org/google/4285F4" alt="" width="18" height="18" />
+                <span>Continue with Google</span>
+              </button>
+              <button class="social-provider-button" type="button" data-social-provider="Facebook" aria-describedby="signupSocialStatus">
+                <img src="https://cdn.simpleicons.org/facebook/1877F2" alt="" width="18" height="18" />
+                <span>Continue with Facebook</span>
+              </button>
+            </div>
+            <p class="social-auth-status" id="signupSocialStatus" role="status" aria-live="polite"></p>
+            <div class="social-auth-divider"><span>or sign up with email</span></div>
+          </div>
+          <div class="signup-field">
+            <label for="signupName">Full name</label>
+            <input id="signupName" name="name" type="text" autocomplete="name" required aria-describedby="signupNameError" />
+            <span class="signup-field-error" id="signupNameError"></span>
+          </div>
+          <div class="signup-field">
+            <label for="signupEmail">Email address</label>
+            <input id="signupEmail" name="email" type="email" autocomplete="email" required aria-describedby="signupEmailError" />
+            <span class="signup-field-error" id="signupEmailError"></span>
+          </div>
+          <div class="signup-field">
+            <label for="signupMobile">Mobile number</label>
+            <input id="signupMobile" name="mobile" type="tel" autocomplete="tel" required aria-describedby="signupMobileError" />
+            <span class="signup-field-error" id="signupMobileError"></span>
+          </div>
+          <div class="signup-field">
+            <label for="signupDestination">Preferred destination</label>
+            <select id="signupDestination" name="destination" required aria-describedby="signupDestinationError">
+              <option value="">Choose a destination</option>
+              <option>Australia</option>
+              <option>Canada</option>
+              <option>New Zealand</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Not decided yet</option>
+            </select>
+            <span class="signup-field-error" id="signupDestinationError"></span>
+          </div>
+          <div class="signup-field">
+            <label for="signupLevel">Preferred study level</label>
+            <select id="signupLevel" name="studyLevel" required aria-describedby="signupLevelError">
+              <option value="">Choose a study level</option>
+              <option>Undergraduate</option>
+              <option>Postgraduate</option>
+              <option>Doctoral</option>
+              <option>Vocational or pathway</option>
+              <option>Not decided yet</option>
+            </select>
+            <span class="signup-field-error" id="signupLevelError"></span>
+          </div>
+          <div class="signup-field signup-password-field">
+            <label for="signupPassword">Password</label>
+            <div class="signup-password-wrap">
+              <input id="signupPassword" name="password" type="password" autocomplete="new-password" required aria-describedby="passwordStrength signupPasswordError" />
+              <button class="signup-password-toggle" type="button" data-password-toggle="signupPassword" aria-label="Show password" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-5.3 0-9.4 4.3-10.8 6.1a1.4 1.4 0 000 1.8C2.6 14.7 6.7 19 12 19s9.4-4.3 10.8-6.1a1.4 1.4 0 000-1.8C21.4 9.3 17.3 5 12 5zm0 11.5a4.5 4.5 0 110-9 4.5 4.5 0 010 9zm0-2a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/></svg>
+              </button>
+            </div>
+            <div class="password-strength" id="passwordStrength" aria-live="polite">
+              <div class="password-strength-bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+              <span class="password-strength-label">Use 8 or more characters</span>
+            </div>
+            <span class="signup-field-error" id="signupPasswordError"></span>
+          </div>
+          <div class="signup-field">
+            <label for="signupConfirmPassword">Confirm password</label>
+            <div class="signup-password-wrap">
+              <input id="signupConfirmPassword" name="confirmPassword" type="password" autocomplete="new-password" required aria-describedby="signupConfirmPasswordError" />
+              <button class="signup-password-toggle" type="button" data-password-toggle="signupConfirmPassword" aria-label="Show password" aria-pressed="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c-5.3 0-9.4 4.3-10.8 6.1a1.4 1.4 0 000 1.8C2.6 14.7 6.7 19 12 19s9.4-4.3 10.8-6.1a1.4 1.4 0 000-1.8C21.4 9.3 17.3 5 12 5zm0 11.5a4.5 4.5 0 110-9 4.5 4.5 0 010 9zm0-2a2.5 2.5 0 100-5 2.5 2.5 0 000 5z"/></svg>
+              </button>
+            </div>
+            <span class="signup-field-error" id="signupConfirmPasswordError"></span>
+          </div>
+          <div class="signup-consent signup-field-wide">
+            <label for="signupTerms">
+              <input id="signupTerms" name="terms" type="checkbox" required aria-describedby="signupTermsError" />
+              <span>I agree to the Terms and Privacy Policy.</span>
+            </label>
+            <span class="signup-field-error" id="signupTermsError"></span>
+          </div>
+          <button class="signup-submit signup-field-wide" type="submit"><span>Create account</span><span class="signup-submit-spinner" aria-hidden="true"></span></button>
+          <p class="signup-account-switch signup-field-wide">Already have an account? <a href="login.html">Sign in</a></p>
+          <p class="signup-form-status signup-field-wide" id="signupStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="signup-confirmation" id="signupConfirmation" hidden tabindex="-1" aria-labelledby="signupConfirmationHeading">
+          <div class="signup-confirmation-mark" aria-hidden="true">✓</div>
+          <p class="signup-eyebrow">DEMO COMPLETE</p>
+          <h2 id="signupConfirmationHeading">Your profile preview is ready.</h2>
+          <p>This frontend demo does not create an account or store your details.</p>
+          <a class="signup-home-link" href="index.html">Return to Study Upbroad</a>
+        </section>
+      </div>
+    </section>
+
+    <aside class="signup-visual" aria-label="Students preparing for study abroad">
+      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&amp;fit=crop&amp;w=1400&amp;q=85" alt="A group of students working together" />
+      <div class="signup-visual-scrim"></div>
+      <div class="signup-visual-copy">
+        <p class="signup-visual-label">STUDY ABROAD, WITH A PLAN</p>
+        <h2>A good journey begins with a clear direction.</h2>
+        <p>Explore destinations, courses, and guidance for your next chapter.</p>
+      </div>
+    </aside>
+  </main>
+  <script src="js/signup.js"></script>
+</body>
+</html>

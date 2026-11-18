@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Connect with Study Upbroad's international education advisors. Submit an enquiry, schedule a consultation, or locate our global offices." />
+  <title>Contact Us – Study Upbroad | Overseas Education Consultancy</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/logo/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/contact.css" />
+
+  <!-- Anti-FOUC: apply saved theme & direction before paint -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('sub_theme') || 'light';
+      var d = localStorage.getItem('sub_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('dir', d);
+      document.documentElement.setAttribute('lang', d === 'rtl' ? 'ar' : 'en');
+    })();
+  </script>
+</head>
+
+<body class="contact-page">
+
+  <!-- =====================================================
+     NAVBAR — shared component
+     ===================================================== -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="index.html" aria-label="Study Upbroad - Home">
+        <img class="brand-logo-icon" src="assets/logo/logo.png" alt="" width="48" height="48" />
+
+        <div class="brand-text">
+          <span class="brand-name">Study Upbroad</span>
+          <span class="brand-tagline">Global Education</span>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="navbar-toggler" type="button" id="navToggler" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+
+      <!-- Collapsible Nav Menu -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Navigation Links -->
+        <ul class="navbar-nav mx-auto" role="list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home2.html">Home 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Nav Footer (Auth Buttons) - only shown in mobile menu -->
+        <div class="mobile-nav-footer d-lg-none" role="group" aria-label="Authentication">
+          <a href="login.html" class="mobile-login-btn" role="button">Login</a>
+          <a href="signup.html" class="mobile-signup-btn" role="button">Sign Up</a>
+          <a href="user/dashboard.html" class="mobile-dashboard-link">User Dashboard</a>
+          <a href="admin/dashboard.html" class="mobile-dashboard-link">Admin Dashboard</a>
+          <a href="#enquiryFormSection" class="mobile-consult-btn">Book Consultation</a>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div class="mobile-controls d-lg-none" role="group" aria-label="Display controls">
+          <button class="nav-control-btn" id="mobileRtlToggle" aria-label="Toggle text direction" title="Toggle LTR/RTL">
+            <span class="rtl-btn-label" id="mobileRtlLabel">LTR</span>
+          </button>
+          <button class="nav-control-btn" id="mobileThemeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <!-- Sun icon -->
+            <svg id="mobileSunIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 001.061-1.06l-1.59-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 001.06 1.06l1.59-1.591a.75.75 0 00-1.061-1.06l-1.59 1.591z"/>
+            </svg>
+            <!-- Moon icon -->
+            <svg id="mobileMoonIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;" aria-hidden="true">
+              <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+
+      </div><!-- end navbarCollapse -->
+
+      <!-- Desktop Right-side Controls -->
+      <div class="navbar-controls d-none d-lg-flex" role="group" aria-label="Display controls">
+
+        <!-- RTL Toggle -->
+        <button class="nav-control-btn" id="rtlToggle" aria-label="Toggle text direction" title="Toggle LTR/RTL">
+          <span class="rtl-btn-label" id="rtlLabel">LTR</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="nav-control-btn" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <!-- Sun icon (light mode) -->
+          <svg id="sunIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 001.061-1.06l-1.59-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 001.06 1.06l1.59-1.591a.75.75 0 00-1.061-1.06l-1.59 1.591z"/>
+          </svg>
+          <!-- Moon icon (dark mode) -->
+          <svg id="moonIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+
+        <!-- Profile Dropdown -->
+        <div class="profile-dropdown dropdown">
+          <button class="dropdown-toggle" id="profileDropdownBtn" data-bs-toggle="dropdown"
+            aria-expanded="false" aria-label="Profile menu" aria-haspopup="true">
+            <div class="profile-avatar">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+              </svg>
+            </div>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdownBtn">
+            <li>
+              <a class="dropdown-item profile-menu-link" href="login.html">
+                <svg class="profile-menu-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M10 17l5-5-5-5v3H3v4h7v3zm9-14H9a2 2 0 00-2 2v2h2V5h10v14H9v-2H7v2a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2z"/>
+                </svg>
+                Login
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item profile-menu-link" href="signup.html">
+                <svg class="profile-menu-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M15 12a4 4 0 100-8 4 4 0 000 8zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4zM5 10V7H3v3H0v2h3v3h2v-3h3v-2H5z"/>
+                </svg>
+                Sign Up
+              </a>
+            </li>
+            <li><hr class="dropdown-divider profile-menu-divider"></li>
+            <li>
+              <a class="dropdown-item profile-menu-link" href="user/dashboard.html">
+                <svg class="profile-menu-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4.42 0-8 2.24-8 5v1h16v-1c0-2.76-3.58-5-8-5z"/>
+                </svg>
+                User Dashboard
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item profile-menu-link" href="admin/dashboard.html">
+                <svg class="profile-menu-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2l8 4v5c0 5.2-3.4 9.4-8 11-4.6-1.6-8-5.8-8-11V6l8-4zm0 2.2L6 7v4c0 4 2.4 7.3 6 8.8 3.6-1.5 6-4.8 6-8.8V7l-6-2.8z"/>
+                </svg>
+                Admin Dashboard
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="#enquiryFormSection" class="navbar-consult-btn" aria-label="Book a free consultation">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+          </svg>
+          <span>Book Consultation</span>
+        </a>
+
+      </div><!-- end navbar-controls -->
+
+    </div><!-- end container -->
+  </nav>
+
+  <!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+  <main id="mainContent">
+
+    <!-- =====================================================
+       SECTION 1: CONTACT HERO
+       ===================================================== -->
+    <section class="contact-hero" id="contactHeroSection" aria-labelledby="contactHeroTitle">
+      <div class="contact-hero-deco-1" aria-hidden="true"></div>
+      <div class="contact-hero-deco-2" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <!-- Hero Left Column -->
+          <div class="col-lg-6">
+            <span class="section-label">LET'S CONNECT</span>
+            <h1 class="contact-hero-title" id="contactHeroTitle">
+              Your Global Education Journey Starts With a Conversation.
+            </h1>
+            <p class="contact-hero-text">
+              Have questions about studying abroad, university applications, or choosing the right destination? Our team is here to understand your goals and help you explore the next steps.
+            </p>
+
+            <div class="contact-hero-ctas">
+              <a href="#enquiryFormSection" class="btn-primary-brand" id="heroEnquiryBtn">
+                <span>Send an Enquiry</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+                </svg>
+              </a>
+              <a href="services.html" class="btn-secondary-brand">
+                <span>Explore Our Services</span>
+              </a>
+            </div>
+
+            <div class="hero-trust-badge">
+              <div class="hero-trust-icon" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <p class="hero-trust-text">Here to guide your next step with personalized advice.</p>
+            </div>
+          </div>
+
+          <!-- Hero Right Photographic Composition -->
+          <div class="col-lg-6">
+            <div class="contact-hero-visual">
+              <div class="hero-floating-badge-top">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span>25+ Global Study Destinations</span>
+              </div>
+
+              <div class="contact-hero-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80"
+                  alt="Senior educational counselor guiding prospective students in a consultation room"
+                  class="contact-hero-image"
+                  width="1000"
+                  height="750"
+                  loading="eager"
+                />
+              </div>
+
+              <!-- Floating Info Panel -->
+              <div class="hero-floating-card">
+                <div class="hero-floating-icon" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="hero-floating-title">Free Profile Evaluation</h3>
+                  <p class="hero-floating-desc">Connect directly with certified destination specialists.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       SECTION 2: CONTACT INFORMATION CHANNELS
+       ===================================================== -->
+    <section class="contact-channels-section" id="contactChannelsSection" aria-labelledby="contactChannelsHeading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">WE'RE HERE TO HELP</span>
+          <h2 class="h1 fw-bold mb-3" id="contactChannelsHeading">Reach Out. We're Ready to Listen.</h2>
+          <p class="text-muted mx-auto" style="max-width: 650px; line-height: 1.7;">
+            Whether you're exploring study destinations, preparing applications, or looking for guidance on your next step, connect with our team through the contact option that works best for you.
+          </p>
+        </div>
+
+        <div class="row g-4" id="contactChannelsGrid">
+          <!-- Item A: Call Us -->
+          <div class="col-lg-3 col-md-6">
+            <div class="contact-channel-card">
+              <div class="channel-card-top">
+                <div class="channel-icon-wrap" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                </div>
+                <span class="channel-badge">Fastest Response</span>
+                <h3 class="channel-title">Speak With Our Team</h3>
+                <p class="channel-subtitle">Direct Line to Senior Counselors</p>
+              </div>
+              <div>
+                <div class="channel-card-value">+44 20 7946 0928</div>
+                <div class="channel-card-meta">Mon – Fri, 9:00 AM – 6:00 PM GMT</div>
+                <a href="tel:+442079460928" class="channel-action-btn" aria-label="Call +44 20 7946 0928">
+                  <span>Call Now</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item B: Email Us -->
+          <div class="col-lg-3 col-md-6">
+            <div class="contact-channel-card">
+              <div class="channel-card-top">
+                <div class="channel-icon-wrap" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <span class="channel-badge">24h Response</span>
+                <h3 class="channel-title">Send Us an Email</h3>
+                <p class="channel-subtitle">Written Guidance &amp; Documentation</p>
+              </div>
+              <div>
+                <div class="channel-card-value">advisors@studyupbroad.com</div>
+                <div class="channel-card-meta">Replies within 24 business hours</div>
+                <a href="mailto:advisors@studyupbroad.com" class="channel-action-btn" aria-label="Email advisors@studyupbroad.com">
+                  <span>Send Email</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item C: Visit Our Office -->
+          <div class="col-lg-3 col-md-6">
+            <div class="contact-channel-card">
+              <div class="channel-card-top">
+                <div class="channel-icon-wrap" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                <span class="channel-badge">In-Person Hub</span>
+                <h3 class="channel-title">Meet Us in Person</h3>
+                <p class="channel-subtitle">Face-to-Face Consultation</p>
+              </div>
+              <div>
+                <div class="channel-card-value">London, WC2H 9JQ, UK</div>
+                <div class="channel-card-meta">Leicester Square / Covent Garden station</div>
+                <a href="#officeMapSection" class="channel-action-btn" aria-label="View map directions">
+                  <span>Get Directions</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item D: Office Hours -->
+          <div class="col-lg-3 col-md-6">
+            <div class="contact-channel-card">
+              <div class="channel-card-top">
+                <div class="channel-icon-wrap" aria-hidden="true">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                  </svg>
+                </div>
+                <span class="channel-badge">Flexible Times</span>
+                <h3 class="channel-title">We're Available to Help</h3>
+                <p class="channel-subtitle">Weekly Consultation Schedule</p>
+              </div>
+              <div>
+                <div class="channel-card-value">Mon – Fri: 9:00 AM – 6:00 PM</div>
+                <div class="channel-card-meta">Sat: 10:00 AM – 2:00 PM (By Appt)</div>
+                <a href="#enquiryFormSection" class="channel-action-btn" aria-label="Schedule an appointment">
+                  <span>Schedule Session</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+       SECTION 3: CONTACT / STUDENT ENQUIRY FORM
+       ===================================================== -->
+    <section class="enquiry-form-section" id="enquiryFormSection" aria-labelledby="enquiryFormHeading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">START A CONVERSATION</span>
+          <h2 class="h1 fw-bold mb-3" id="enquiryFormHeading">Tell Us What You're Planning.</h2>
+          <p class="text-muted mx-auto" style="max-width: 650px; line-height: 1.7;">
+            Share a few details about your education goals and our team can understand your enquiry and guide you toward the appropriate next step.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+
+            <!-- The Form -->
+            <form id="studentEnquiryForm" class="enquiry-form-card" novalidate aria-label="Student consultation enquiry form">
+
+              <!-- Section A – Personal Information -->
+              <div class="form-group-section">
+                <div class="form-section-title">
+                  <span class="form-section-number">A</span>
+                  <span>Personal Information</span>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="fullName" class="form-label">Full Name <span class="required-star">*</span></label>
+                    <input type="text" class="form-control" id="fullName" placeholder="e.g. Alexander Davies" required />
+                    <div class="invalid-feedback" id="fullNameError">Please enter your full name.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="emailAddress" class="form-label">Email Address <span class="required-star">*</span></label>
+                    <input type="email" class="form-control" id="emailAddress" placeholder="e.g. alexander@example.com" required />
+                    <div class="invalid-feedback" id="emailAddressError">Please enter a valid email address.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="mobileNumber" class="form-label">Mobile Number <span class="required-star">*</span></label>
+                    <input type="tel" class="form-control" id="mobileNumber" placeholder="e.g. +44 7911 123456" required />
+                    <div class="invalid-feedback" id="mobileNumberError">Please enter a valid phone number.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="countryResidence" class="form-label">Country of Residence <span class="required-star">*</span></label>
+                    <input type="text" class="form-control" id="countryResidence" placeholder="e.g. United Kingdom" required />
+                    <div class="invalid-feedback" id="countryResidenceError">Please enter your country of residence.</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section B – Education Information -->
+              <div class="form-group-section">
+                <div class="form-section-title">
+                  <span class="form-section-number">B</span>
+                  <span>Education Information</span>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="highestQualification" class="form-label">Current / Highest Qualification <span class="required-star">*</span></label>
+                    <select class="form-select" id="highestQualification" required>
+                      <option value="" selected disabled>Select your qualification</option>
+                      <option value="Higher Secondary">Higher Secondary / High School</option>
+                      <option value="Diploma">Diploma / Vocational</option>
+                      <option value="Bachelor's Degree">Bachelor's Degree</option>
+                      <option value="Master's Degree">Master's Degree</option>
+                      <option value="Doctoral / Research">Doctoral / Research</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <div class="invalid-feedback" id="highestQualificationError">Please select your highest qualification.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="preferredDestination" class="form-label">Preferred Study Destination <span class="required-star">*</span></label>
+                    <select class="form-select" id="preferredDestination" required>
+                      <option value="" selected disabled>Select preferred country</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="United States">United States</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Germany">Germany</option>
+                      <option value="Ireland">Ireland</option>
+                      <option value="Other">Other</option>
+                      <option value="Not Decided">Not Decided (Need Guidance)</option>
+                    </select>
+                    <div class="invalid-feedback" id="preferredDestinationError">Please select your preferred destination.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="preferredStudyLevel" class="form-label">Preferred Study Level <span class="required-star">*</span></label>
+                    <select class="form-select" id="preferredStudyLevel" required>
+                      <option value="" selected disabled>Select target study level</option>
+                      <option value="Undergraduate">Undergraduate (Bachelor's)</option>
+                      <option value="Postgraduate">Postgraduate (Master's)</option>
+                      <option value="Doctoral / Research">Doctoral / Research (PhD)</option>
+                      <option value="Diploma / Certificate">Diploma / Certificate</option>
+                      <option value="Not Decided">Not Decided</option>
+                    </select>
+                    <div class="invalid-feedback" id="preferredStudyLevelError">Please select your preferred study level.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="preferredCourse" class="form-label">Preferred Course / Subject <span class="text-muted fw-normal">(Optional)</span></label>
+                    <input type="text" class="form-control" id="preferredCourse" placeholder="e.g. Computer Science, MBA, Data Analytics" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section C – Enquiry Details -->
+              <div class="form-group-section">
+                <div class="form-section-title">
+                  <span class="form-section-number">C</span>
+                  <span>Enquiry Details</span>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="interestedService" class="form-label">What are you interested in? <span class="required-star">*</span></label>
+                    <select class="form-select" id="interestedService" required>
+                      <option value="" selected disabled>Select a consultancy service</option>
+                      <option value="Career &amp; Profile Evaluation">Career &amp; Profile Evaluation</option>
+                      <option value="University &amp; Course Selection">University &amp; Course Selection</option>
+                      <option value="Admission &amp; Application Assistance">Admission &amp; Application Assistance</option>
+                      <option value="Scholarship &amp; Financial Guidance">Scholarship &amp; Financial Guidance</option>
+                      <option value="Visa Guidance &amp; Assistance">Visa Guidance &amp; Assistance</option>
+                      <option value="Pre-Departure &amp; Student Support">Pre-Departure &amp; Student Support</option>
+                      <option value="General Enquiry">General Enquiry</option>
+                      <option value="Not Sure Yet">Not Sure Yet</option>
+                    </select>
+                    <div class="invalid-feedback" id="interestedServiceError">Please select what you are interested in.</div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="expectedIntake" class="form-label">Expected Intake <span class="text-muted fw-normal">(Optional)</span></label>
+                    <select class="form-select" id="expectedIntake">
+                      <option value="">Select expected intake</option>
+                      <option value="Fall 2026 (Sep / Oct)">Fall 2026 (Sep / Oct)</option>
+                      <option value="Spring 2027 (Jan / Feb)">Spring 2027 (Jan / Feb)</option>
+                      <option value="Fall 2027 (Sep / Oct)">Fall 2027 (Sep / Oct)</option>
+                      <option value="Later / Flexible">Later / Flexible</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="enquiryMessage" class="form-label">Your Message <span class="required-star">*</span></label>
+                    <textarea class="form-control" id="enquiryMessage" rows="4" placeholder="Tell us a little about your study abroad plans, questions, or the guidance you are looking for..." required minlength="20"></textarea>
+                    <div class="invalid-feedback" id="enquiryMessageError">Please enter a message (at least 20 characters).</div>
+                  </div>
+
+                  <div class="col-12 mt-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="consentCheckbox" required />
+                      <label class="form-check-label" for="consentCheckbox">
+                        I agree to be contacted regarding my enquiry and understand that my information will be used to respond to my request. <span class="required-star">*</span>
+                      </label>
+                      <div class="invalid-feedback" id="consentCheckboxError">You must agree before submitting your enquiry.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Buttons -->
+              <div class="form-actions">
+                <button type="submit" class="btn-primary-brand" id="enquirySubmitBtn">
+                  <span>Submit Enquiry</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                  </svg>
+                </button>
+                <button type="button" class="btn-form-clear" id="enquiryClearBtn">Clear Form</button>
+              </div>
+
+            </form>
+
+            <!-- Honest Demo Confirmation Card (shown upon successful client validation) -->
+            <div id="enquiryConfirmationCard" class="enquiry-confirmation-card" role="region" aria-live="polite">
+              <div class="confirmation-icon-circle" aria-hidden="true">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+              </div>
+              <h3 class="confirmation-heading">Thank You for Reaching Out!</h3>
+              <p class="confirmation-subtext">
+                Your enquiry has been completed in this demonstration. Connect the form to the company's email or enquiry backend to receive and manage real student submissions.
+              </p>
+
+              <div class="confirmation-summary-box">
+                <div class="summary-item">
+                  <span class="summary-label">Full Name:</span>
+                  <span class="summary-value" id="summaryFullName">-</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Email Address:</span>
+                  <span class="summary-value" id="summaryEmail">-</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Mobile Number:</span>
+                  <span class="summary-value" id="summaryPhone">-</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Preferred Destination:</span>
+                  <span class="summary-value" id="summaryDestination">-</span>
+                </div>
+                <div class="summary-item">
+                  <span class="summary-label">Interested Service:</span>
+                  <span class="summary-value" id="summaryService">-</span>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <button type="button" class="btn-primary-brand" id="submitAnotherBtn">
+                  <span>Submit Another Enquiry</span>
+                </button>
+                <a href="index.html" class="btn-secondary-brand">
+                  <span>Back to Home</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+       SECTION 4: INTERACTIVE OFFICE MAP
+       ===================================================== -->
+    <section class="office-map-section" id="officeMapSection" aria-labelledby="officeMapHeading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">FIND OUR OFFICE</span>
+          <h2 class="h1 fw-bold mb-3" id="officeMapHeading">Visit Us. Let's Talk About Your Future.</h2>
+          <p class="text-muted mx-auto" style="max-width: 650px; line-height: 1.7;">
+            If you prefer a personal conversation, visit our office and connect with our team to discuss your international education plans.
+          </p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Left: Responsive Interactive Map Frame -->
+          <div class="col-lg-7">
+            <div class="map-wrapper-card">
+              <div class="map-iframe-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.2889249767844!2d-0.12948922338006354!3d51.507914471814674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487604ce3941eb1f%3A0x1a5342fdf089dd65!2sTrafalgar%20Square!5e0!3m2!1sen!2suk!4v1700000000000!5m2!1sen!2suk"
+                  title="Study Upbroad London Headquarters Location Map"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Confirmed Office Details -->
+          <div class="col-lg-5">
+            <div class="map-details-card">
+              <div>
+                <div class="map-info-block">
+                  <div class="map-info-title">Global Headquarters Address</div>
+                  <p class="map-info-value">
+                    452 Global Education Plaza, Suite 800<br />
+                    London, WC2H 9JQ, United Kingdom
+                  </p>
+                  <div class="transit-chip">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2c-4 0-8 .5-8 4v9.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V6c0-3.5-4-4-8-4zM7.5 17c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V7h12v4z"/>
+                    </svg>
+                    <span>Leicester Square / Covent Garden (3 min walk)</span>
+                  </div>
+                </div>
+
+                <div class="map-info-block">
+                  <div class="map-info-title">Confirmed Working Hours</div>
+                  <p class="map-info-value mb-1"><strong>Monday – Friday:</strong> 9:00 AM – 6:00 PM GMT</p>
+                  <p class="map-info-value mb-1"><strong>Saturday:</strong> 10:00 AM – 2:00 PM GMT (By Appt)</p>
+                  <p class="map-info-value"><strong>Sunday:</strong> Closed</p>
+                </div>
+
+                <div class="map-info-block">
+                  <div class="map-info-title">Direct Inquiries</div>
+                  <p class="map-info-value mb-1"><strong>Phone:</strong> +44 20 7946 0928</p>
+                  <p class="map-info-value"><strong>Email:</strong> advisors@studyupbroad.com</p>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <a
+                  href="https://maps.google.com/?q=London+WC2H+9JQ+UK"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn-primary-brand w-100 text-center"
+                >
+                  <span>Open in Google Maps</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+       SECTION 5: OFFICE & BRANCH INFORMATION
+       ===================================================== -->
+    <section class="branches-section" id="branchesSection" aria-labelledby="branchesHeading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">WHERE TO FIND US</span>
+          <h2 class="h1 fw-bold mb-3" id="branchesHeading">Connect With Us, Wherever You Are.</h2>
+          <p class="text-muted mx-auto" style="max-width: 650px; line-height: 1.7;">
+            Our international offices and regional advisory hubs give you direct access to certified destination counselors worldwide.
+          </p>
+        </div>
+
+        <div class="row g-4" id="branchesGrid">
+          <!-- London Primary Headquarters -->
+          <div class="col-lg-4 col-md-6">
+            <div class="branch-card">
+              <div class="branch-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                  alt="London Global Headquarters Office Exterior"
+                  class="branch-image"
+                  loading="lazy"
+                />
+                <span class="branch-badge">Primary Advisory Hub</span>
+              </div>
+              <div class="branch-body">
+                <div>
+                  <h3 class="branch-name">London Global Headquarters</h3>
+                  <div class="branch-region">United Kingdom &amp; Europe</div>
+                  <p class="branch-address">
+                    452 Global Education Plaza, Suite 800, London, WC2H 9JQ, United Kingdom
+                  </p>
+                  <div class="branch-meta-row">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>+44 20 7946 0928</span>
+                  </div>
+                  <div class="branch-meta-row">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>london@studyupbroad.com</span>
+                  </div>
+                </div>
+                <div class="branch-footer">
+                  <a href="https://maps.google.com/?q=London+WC2H+9JQ+UK" target="_blank" rel="noopener noreferrer" class="channel-action-btn">
+                    <span>Directions to Office</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dubai Regional Hub -->
+          <div class="col-lg-4 col-md-6">
+            <div class="branch-card">
+              <div class="branch-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+                  alt="Dubai Regional Advisory Hub"
+                  class="branch-image"
+                  loading="lazy"
+                />
+                <span class="branch-badge">Middle East &amp; South Asia</span>
+              </div>
+              <div class="branch-body">
+                <div>
+                  <h3 class="branch-name">Dubai Regional Advisory Hub</h3>
+                  <div class="branch-region">United Arab Emirates</div>
+                  <p class="branch-address">
+                    Level 14, Emirates International Towers, Sheikh Zayed Road, Dubai, UAE
+                  </p>
+                  <div class="branch-meta-row">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>+971 4 312 8900</span>
+                  </div>
+                  <div class="branch-meta-row">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>dubai@studyupbroad.com</span>
+                  </div>
+                </div>
+                <div class="branch-footer">
+                  <a href="https://maps.google.com/?q=Emirates+Towers+Dubai+UAE" target="_blank" rel="noopener noreferrer" class="channel-action-btn">
+                    <span>Directions to Office</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Singapore Asia-Pacific Office -->
+          <div class="col-lg-4 col-md-6">
+            <div class="branch-card">
+              <div class="branch-image-wrap">
+                <img
+                  src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80"
+                  alt="Singapore Asia-Pacific Office"
+                  class="branch-image"
+                  loading="lazy"
+                />
+                <span class="branch-badge">Asia-Pacific Region</span>
+              </div>
+              <div class="branch-body">
+                <div>
+                  <h3 class="branch-name">Singapore Asia-Pacific Office</h3>
+                  <div class="branch-region">Southeast Asia &amp; Oceania</div>
+                  <p class="branch-address">
+                    12 Marina Boulevard, Marina Bay Financial Centre Tower 3, Singapore 018982
+                  </p>
+                  <div class="branch-meta-row">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    <span>+65 6812 7400</span>
+                  </div>
+                  <div class="branch-meta-row">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>singapore@studyupbroad.com</span>
+                  </div>
+                </div>
+                <div class="branch-footer">
+                  <a href="https://maps.google.com/?q=Marina+Bay+Financial+Centre+Singapore" target="_blank" rel="noopener noreferrer" class="channel-action-btn">
+                    <span>Directions to Office</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13h11.86l-5.43 5.43 1.42 1.42L21.14 12l-8.29-8.29-1.42 1.42L16.86 11H5v2z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+       SECTION 6: WHY CONNECT WITH US
+       ===================================================== -->
+    <section class="why-connect-section" id="whyConnectSection" aria-labelledby="whyConnectHeading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">EXPERT PERSPECTIVE</span>
+          <h2 class="h1 fw-bold mb-3" id="whyConnectHeading">Every Question Deserves the Right Guidance.</h2>
+          <p class="text-muted mx-auto" style="max-width: 650px; line-height: 1.7;">
+            Studying abroad is one of the most transformative decisions of your life. Discover why thousands of students trust Study Upbroad each year.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-lg-6">
+            <div class="why-connect-card">
+              <span class="why-number">01</span>
+              <div>
+                <h3 class="why-title">Understand Your Options</h3>
+                <p class="why-desc">
+                  Discuss suitable study destinations, universities, and courses tailored to your academic background, career ambitions, and budget.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-6">
+            <div class="why-connect-card">
+              <span class="why-number">02</span>
+              <div>
+                <h3 class="why-title">Get Clear Next Steps</h3>
+                <p class="why-desc">
+                  Deconstruct the international application process into manageable milestones with unambiguous deadlines, requirements, and checkpoints.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-6">
+            <div class="why-connect-card">
+              <span class="why-number">03</span>
+              <div>
+                <h3 class="why-title">Explore Available Support</h3>
+                <p class="why-desc">
+                  Find out which of our six dedicated guidance services matches your needs—from profile evaluation to pre-departure briefing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-6">
+            <div class="why-connect-card">
+              <span class="why-number">04</span>
+              <div>
+                <h3 class="why-title">Plan With Confidence</h3>
+                <p class="why-desc">
+                  Receive realistic, evidence-based recommendations backed by certified counselors with years of overseas education advisory experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+       SECTION 7: FREQUENTLY ASKED QUESTIONS
+       ===================================================== -->
+    <section class="contact-faq-section" id="contactFaqSection" aria-labelledby="contactFaqHeading">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="section-label">COMMON QUESTIONS</span>
+          <h2 class="h1 fw-bold mb-3" id="contactFaqHeading">Before You Get in Touch.</h2>
+          <p class="text-muted mx-auto" style="max-width: 650px; line-height: 1.7;">
+            Here are direct answers to common questions about our consultation process, office appointments, and advisory services.
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="accordion contact-accordion" id="contactAccordion">
+
+              <!-- Question 1 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                    How can I contact your consultancy?
+                  </button>
+                </h3>
+                <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    You can reach us through several convenient channels: submitting the online student enquiry form on this page, calling our direct telephone lines (+44 20 7946 0928), sending an email to advisors@studyupbroad.com, or visiting one of our advisory hubs in London, Dubai, or Singapore during regular business hours.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 2 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                    Can I discuss my study abroad plans before selecting a service?
+                  </button>
+                </h3>
+                <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    Yes, absolutely. We offer an initial discovery consultation where our counselors evaluate your background, discuss your aspirations, and outline your potential options before you commit to any specific guidance package.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 3 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                    Can I enquire about a specific country or university?
+                  </button>
+                </h3>
+                <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    Yes. Our team covers 25+ premier international study destinations, including the United Kingdom, United States, Canada, Australia, Germany, and Ireland. Whether you have a specific institution in mind or are deciding between multiple countries, we provide comprehensive admissions insights.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 4 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                    Can I request guidance for scholarships?
+                  </button>
+                </h3>
+                <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    Yes. Scholarship &amp; Financial Guidance is one of our six dedicated core services. We help identify merit-based, need-based, and government-sponsored grants, assist in reviewing financial aid essays, and guide you on documentation deadlines.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 5 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                    Can I visit the office in person?
+                  </button>
+                </h3>
+                <div id="faqCollapse5" class="accordion-collapse collapse" aria-labelledby="faqHeading5" data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    Yes! We welcome students and families to our offices. Our London headquarters is conveniently located at 452 Global Education Plaza, London WC2H 9JQ. While walk-ins are welcomed, booking an appointment in advance guarantees dedicated counseling time with a specialist for your destination.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 6 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                    What information should I provide in my enquiry?
+                  </button>
+                </h3>
+                <div id="faqCollapse6" class="accordion-collapse collapse" aria-labelledby="faqHeading6" data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    To give you the most tailored initial advice, it is helpful to provide your current qualification, academic grades or GPA, preferred countries of interest, intended intake period, and any English proficiency test scores (such as IELTS or TOEFL) you may have already completed.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Question 7 -->
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="faqHeading7">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse7" aria-expanded="false" aria-controls="faqCollapse7">
+                    How can I know which service is suitable for me?
+                  </button>
+                </h3>
+                <div id="faqCollapse7" class="accordion-collapse collapse" aria-labelledby="faqHeading7" data-bs-parent="#contactAccordion">
+                  <div class="accordion-body">
+                    During our initial discussion or upon reviewing your enquiry form, our counselors will diagnose where you are in the application timeline. We will recommend the exact guidance tier or standalone service that provides the highest value for your current stage without unnecessary costs.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =====================================================
+       SECTION 8: FINAL CTA
+       ===================================================== -->
+    <section class="contact-final-cta" id="contactFinalCta" aria-labelledby="finalCtaTitle">
+      <div class="container position-relative">
+        <span class="section-label mb-3" style="background: rgba(255, 255, 255, 0.15); color: #fff9f2; border-color: rgba(255, 255, 255, 0.3);">
+          BEGIN YOUR JOURNEY
+        </span>
+        <h2 id="finalCtaTitle">Let's Take the First Step Together.</h2>
+        <p>
+          Your international education journey begins with a question, an idea, or a goal. Reach out to our team and explore the possibilities ahead.
+        </p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="#enquiryFormSection" class="btn-primary-brand" style="border: none;">
+            <span>Send an Enquiry</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"/>
+            </svg>
+          </a>
+          <a href="services.html" class="btn-secondary-brand" style="background: rgba(255, 255, 255, 0.1); color: #ffffff !important; border-color: rgba(255, 255, 255, 0.25);">
+            <span>Explore Our Services</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+     FOOTER — shared component
+     ===================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Brand Column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <div class="footer-brand-lockup">
+              <img class="brand-logo-icon footer-brand-logo" src="assets/logo/logo.png" alt="" width="48" height="48" />
+              <div>
+                <div class="brand-name">Study Upbroad</div>
+                <div class="brand-tagline">Global Education Consultancy</div>
+              </div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Your trusted partner in international education. We guide students from first dream to final destination across 25+ study destinations worldwide.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="footer-social" role="list" aria-label="Social media links">
+            <a href="#" class="social-icon-link" aria-label="Follow us on Facebook" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Follow us on Instagram" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Follow us on LinkedIn" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Follow us on YouTube" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Follow us on Twitter/X" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html" role="listitem">Home 1</a></li>
+            <li><a href="home2.html" role="listitem">Home 2</a></li>
+            <li><a href="about.html" role="listitem">About Us</a></li>
+            <li><a href="services.html" role="listitem">Our Services</a></li>
+            <li><a href="pricing.html" role="listitem">Pricing</a></li>
+            <li><a href="blog.html" role="listitem">Blog</a></li>
+            <li><a href="contact.html" role="listitem">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Study Destinations -->
+        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+          <h3 class="footer-heading">Destinations</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" role="listitem">United Kingdom</a></li>
+            <li><a href="#" role="listitem">United States</a></li>
+            <li><a href="#" role="listitem">Canada</a></li>
+            <li><a href="#" role="listitem">Australia</a></li>
+            <li><a href="#" role="listitem">Germany</a></li>
+            <li><a href="#" role="listitem">Ireland</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="service-details.html?service=career-profile-evaluation" role="listitem">Profile Evaluation</a></li>
+            <li><a href="service-details.html?service=university-course-selection" role="listitem">University Selection</a></li>
+            <li><a href="service-details.html?service=admission-application-assistance" role="listitem">Application Support</a></li>
+            <li><a href="service-details.html?service=scholarship-financial-guidance" role="listitem">Scholarship Guidance</a></li>
+            <li><a href="service-details.html?service=visa-guidance-assistance" role="listitem">Visa Assistance</a></li>
+            <li><a href="service-details.html?service=pre-departure-student-support" role="listitem">Pre-Departure Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact + Information -->
+        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+          <h3 class="footer-heading">Contact</h3>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <strong>Address</strong>
+              123 Education Lane, City
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <strong>Email</strong>
+              hello@studyupbroad.com
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <strong>Phone</strong>
+              +1 (800) 123-4567
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end row -->
+
+      <!-- Newsletter - Full Width Row -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="newsletter-section">
+            <div class="row align-items-center g-3">
+              <div class="col-lg-5">
+                <h4 class="footer-heading" style="margin-bottom: 0.5rem;">Stay Informed</h4>
+                <p class="newsletter-desc mb-0">
+                  Get the latest study abroad opportunities, scholarship alerts, and education tips straight to your inbox.
+                </p>
+              </div>
+              <div class="col-lg-7">
+                <form id="newsletterForm" class="newsletter-form" novalidate aria-label="Newsletter subscription">
+                  <div class="input-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="newsletterEmail"
+                      placeholder="Enter your email address"
+                      aria-label="Email address"
+                      required
+                    />
+                    <button class="newsletter-submit-btn" type="submit" id="newsletterSubmitBtn">
+                      Subscribe
+                    </button>
+                  </div>
+                  <div class="newsletter-message" id="newsletterMessage" role="alert" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="footer-bottom-text mb-0">
+              &copy; <span id="footerYear">2026</span> Study Upbroad. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end container -->
+  </footer>
+
+  <!-- =====================================================
+     SCRIPTS
+     ===================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/contact-data.js"></script>
+  <script src="js/contact.js"></script>
+
+</body>
+
+</html>

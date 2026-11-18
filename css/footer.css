@@ -1,0 +1,377 @@
+/* ============================================
+   FOOTER STYLES - Study Upbroad
+   Premium International Education Consultancy
+   ============================================ */
+
+.site-footer {
+  background: linear-gradient(170deg, #1a0608 0%, #2a0e10 50%, #1f0a0c 100%);
+  color: rgba(255, 249, 242, 0.85);
+  padding-top: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--burgundy), var(--burnt-orange), var(--warm-orange), var(--muted-gold));
+}
+
+.site-footer::after {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(214, 90, 49, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ---- Footer Brand ---- */
+.footer-brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.footer-brand-logo {
+  padding: 2px;
+  border-radius: 50%;
+  background-color: rgba(255, 249, 242, 0.96);
+}
+
+.footer-brand .brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--soft-ivory);
+  margin-bottom: 0.25rem;
+}
+
+.footer-brand .brand-tagline {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--warm-orange);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.footer-brand-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: rgba(255, 249, 242, 0.65);
+  max-width: 280px;
+}
+
+/* ---- Social Icons ---- */
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.social-icon-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 249, 242, 0.08);
+  border: 1px solid rgba(255, 249, 242, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon-link svg {
+  width: 18px;
+  height: 18px;
+  fill: rgba(255, 249, 242, 0.7);
+  transition: fill 0.3s ease;
+}
+
+.social-icon-link:hover {
+  background: var(--burnt-orange);
+  border-color: var(--burnt-orange);
+  transform: translateY(-3px);
+}
+
+.social-icon-link:hover svg {
+  fill: #fff;
+}
+
+/* ---- Footer Headings ---- */
+.footer-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--soft-ivory);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--burnt-orange);
+  border-radius: 2px;
+}
+
+[dir="rtl"] .footer-heading::after {
+  left: auto;
+  right: 0;
+}
+
+/* ---- Footer Links ---- */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.65rem;
+}
+
+.footer-links a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(255, 249, 242, 0.65);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-links a::before {
+  content: '';
+  width: 0;
+  height: 1px;
+  background: var(--warm-orange);
+  transition: width 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--warm-orange);
+  padding-left: 0.5rem;
+}
+
+.footer-links a:hover::before {
+  width: 12px;
+}
+
+[dir="rtl"] .footer-links a:hover {
+  padding-left: 0;
+  padding-right: 0.5rem;
+}
+
+/* ---- Contact Info ---- */
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.footer-contact-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(214, 90, 49, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.footer-contact-icon svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--warm-orange);
+}
+
+.footer-contact-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 249, 242, 0.65);
+  line-height: 1.5;
+}
+
+.footer-contact-text strong {
+  display: block;
+  color: var(--soft-ivory);
+  font-weight: 600;
+  font-size: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+
+/* ---- Newsletter ---- */
+.newsletter-section {
+  background: rgba(255, 249, 242, 0.04);
+  border: 1px solid rgba(255, 249, 242, 0.08);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.newsletter-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 249, 242, 0.6);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.newsletter-form .input-group {
+  border-radius: 50px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 249, 242, 0.15);
+  background: rgba(255, 249, 242, 0.06);
+}
+
+.newsletter-form .form-control {
+  background: transparent;
+  border: none;
+  color: var(--soft-ivory);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.875rem;
+  padding: 0.75rem 1.25rem;
+}
+
+.newsletter-form .form-control::placeholder {
+  color: rgba(255, 249, 242, 0.4);
+}
+
+.newsletter-form .form-control:focus {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: var(--soft-ivory);
+}
+
+.newsletter-submit-btn {
+  background: linear-gradient(135deg, var(--burgundy), var(--burnt-orange));
+  border: none;
+  color: #fff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.newsletter-submit-btn:hover {
+  background: linear-gradient(135deg, var(--burnt-orange), var(--warm-orange));
+  color: #fff;
+}
+
+.newsletter-message {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  display: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+}
+
+.newsletter-message.success {
+  display: block;
+  background: rgba(76, 175, 80, 0.15);
+  color: #81c784;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.newsletter-message.error {
+  display: block;
+  background: rgba(244, 67, 54, 0.15);
+  color: #ef9a9a;
+  border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+/* ---- Footer Bottom Bar ---- */
+.footer-bottom {
+  margin-top: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 249, 242, 0.08);
+}
+
+.footer-bottom-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 249, 242, 0.45);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 249, 242, 0.45);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--warm-orange);
+}
+
+[dir="rtl"] .footer-bottom-links {
+  justify-content: flex-start;
+}
+
+[dir="rtl"] .footer-heading::after {
+  left: auto;
+  right: 0;
+}
+
+/* ---- Dark mode overrides (footer is always dark) ---- */
+[data-theme="light"] .site-footer {
+  background: linear-gradient(170deg, #1a0608 0%, #2a0e10 50%, #1f0a0c 100%);
+}
+
+@media (max-width: 767.98px) {
+  .site-footer {
+    padding-top: 3rem;
+  }
+
+  .footer-brand-desc {
+    max-width: 100%;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .newsletter-section {
+    padding: 1.5rem;
+  }
+}

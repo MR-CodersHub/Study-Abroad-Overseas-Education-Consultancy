@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Study Upbroad administration demo workspace." />
+  <title>Admin Dashboard | Study Upbroad</title>
+  <link rel="icon" type="image/png" href="../assets/logo/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script>
+    (function () {
+      var theme = localStorage.getItem('sub_theme') || 'light';
+      var direction = localStorage.getItem('sub_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('dir', direction);
+      document.documentElement.setAttribute('lang', direction === 'rtl' ? 'ar' : 'en');
+    })();
+  </script>
+</head>
+<body class="admin-body">
+  <div class="admin-overlay" id="adminOverlay"></div>
+  <div class="admin-shell">
+    <aside class="admin-sidebar" id="adminSidebar" aria-label="Admin navigation">
+      <a class="admin-brand" href="../index.html" aria-label="Study Upbroad home">
+        <img src="../assets/logo/logo.png" alt="Study Upbroad" />
+        <span><strong>Study Upbroad</strong><small>ADMIN WORKSPACE</small></span>
+      </a>
+
+      <div class="admin-user">
+        <span class="admin-avatar">OA</span>
+        <span class="admin-user-copy"><strong>Olivia Anderson</strong><small>Super Admin</small><small class="admin-id">ADM-2026-001</small></span>
+      </div>
+
+      <nav class="admin-nav" id="adminNav">
+        <div class="nav-group">
+          <span class="nav-group-label">Overview</span>
+          <button class="admin-nav-link active" type="button" data-section="dashboard" data-icon="grid"><span class="nav-icon"></span><span>Dashboard</span></button>
+        </div>
+        <div class="nav-group">
+          <span class="nav-group-label">Student management</span>
+          <button class="admin-nav-link" type="button" data-section="students" data-icon="users"><span class="nav-icon"></span><span>Students</span></button>
+          <button class="admin-nav-link" type="button" data-section="enquiries" data-icon="inbox"><span class="nav-icon"></span><span>Enquiries</span><span class="nav-badge" id="enquiryNavCount">0</span></button>
+          <button class="admin-nav-link" type="button" data-section="applications" data-icon="file"><span class="nav-icon"></span><span>Applications</span></button>
+          <button class="admin-nav-link" type="button" data-section="documents" data-icon="folder"><span class="nav-icon"></span><span>Documents</span><span class="nav-badge" id="documentNavCount">0</span></button>
+        </div>
+        <div class="nav-group">
+          <span class="nav-group-label">Consultancy operations</span>
+          <button class="admin-nav-link" type="button" data-section="consultations" data-icon="calendar"><span class="nav-icon"></span><span>Consultations</span><span class="nav-badge" id="consultationNavCount">0</span></button>
+          <button class="admin-nav-link" type="button" data-section="appointments" data-icon="clock"><span class="nav-icon"></span><span>Appointments</span></button>
+          <button class="admin-nav-link" type="button" data-section="messages" data-icon="message"><span class="nav-icon"></span><span>Messages</span><span class="nav-badge" id="messageNavCount">0</span></button>
+        </div>
+        <div class="nav-group">
+          <span class="nav-group-label">Education management</span>
+          <button class="admin-nav-link" type="button" data-section="universities" data-icon="school"><span class="nav-icon"></span><span>Universities</span></button>
+          <button class="admin-nav-link" type="button" data-section="scholarships" data-icon="award"><span class="nav-icon"></span><span>Scholarships</span></button>
+          <button class="admin-nav-link" type="button" data-section="services" data-icon="layers"><span class="nav-icon"></span><span>Services</span></button>
+          <button class="admin-nav-link" type="button" data-section="pricing" data-icon="tag"><span class="nav-icon"></span><span>Pricing Plans</span></button>
+        </div>
+        <div class="nav-group">
+          <span class="nav-group-label">Website management</span>
+          <button class="admin-nav-link" type="button" data-section="blog" data-icon="edit"><span class="nav-icon"></span><span>Blog Management</span></button>
+          <button class="admin-nav-link" type="button" data-section="website-enquiries" data-icon="globe"><span class="nav-icon"></span><span>Website Enquiries</span><span class="nav-badge" id="websiteEnquiryNavCount">0</span></button>
+        </div>
+        <div class="nav-group">
+          <span class="nav-group-label">Analytics</span>
+          <button class="admin-nav-link" type="button" data-section="reports" data-icon="chart"><span class="nav-icon"></span><span>Reports &amp; Analytics</span></button>
+        </div>
+        <div class="nav-group">
+          <span class="nav-group-label">System</span>
+          <button class="admin-nav-link" type="button" data-section="settings" data-icon="settings"><span class="nav-icon"></span><span>Settings</span></button>
+        </div>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <a class="admin-nav-link secondary-link" href="../index.html"><span class="nav-icon" data-icon="arrow"></span><span>Back to Main Website</span></a>
+        <button class="admin-nav-link exit-link" type="button" data-action="exit"><span class="nav-icon" data-icon="logout"></span><span>Sign Out / Exit Demo</span></button>
+        <span class="sidebar-demo-label">FRONTEND DEMO · NO LIVE DATA</span>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-header">
+        <div class="header-leading">
+          <button class="icon-button mobile-menu" type="button" id="sidebarToggle" aria-label="Open navigation"><span class="nav-icon" data-icon="menu"></span></button>
+          <div><p class="header-kicker">Study Upbroad <span>/</span> Admin</p><h1 class="header-title" id="headerTitle">Dashboard</h1></div>
+        </div>
+        <div class="header-tools">
+          <div class="global-search-wrap">
+            <label class="global-search">
+              <span class="nav-icon" data-icon="search"></span>
+              <input id="globalSearch" type="search" placeholder="Search students, applications…" autocomplete="off" aria-label="Search dashboard records" />
+              <kbd>⌘ K</kbd>
+            </label>
+            <div class="search-results" id="searchResults" role="listbox" aria-label="Search results"></div>
+          </div>
+          <div class="header-popover-wrap">
+            <button class="icon-button notification-button" type="button" id="notificationToggle" aria-label="Notifications"><span class="nav-icon" data-icon="bell"></span><span class="notification-dot" id="notificationCount">0</span></button>
+            <section class="notification-popover" id="notificationPopover" aria-label="Notifications" hidden>
+              <div class="popover-heading"><strong>Notifications</strong><button class="text-button" type="button" data-action="mark-all-notifications">Mark all read</button></div>
+              <div class="notification-list" id="notificationList"></div>
+            </section>
+          </div>
+          <button class="icon-button" type="button" id="themeToggle" aria-label="Toggle light and dark theme"><span class="nav-icon" data-icon="theme"></span></button>
+          <button class="direction-button" type="button" id="directionToggle" aria-label="Toggle LTR and RTL">LTR</button>
+          <div class="profile-wrap">
+            <button class="profile-button" type="button" id="profileToggle" aria-label="Admin profile menu" aria-expanded="false"><span class="profile-avatar">OA</span><span class="profile-name">Olivia</span><span class="nav-icon" data-icon="chevron"></span></button>
+            <div class="profile-menu" id="profileMenu" hidden>
+              <div class="profile-menu-heading"><strong id="profileMenuName">Olivia Anderson</strong><small id="profileMenuRole">Super Admin · Demo</small></div>
+              <button type="button" data-section="settings">My Profile &amp; Settings</button>
+              <a href="../index.html">Back to Main Website</a>
+              <button class="exit-menu-item" type="button" data-action="exit">Exit Demo</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="admin-content" id="adminContent">
+        <div class="demo-banner"><span class="demo-mark">i</span><span><strong>Demo mode</strong> — sample records and actions stay in this browser session; nothing is sent to a server.</span></div>
+        <div id="sectionView" aria-live="polite"></div>
+        <footer class="admin-footer">Study Upbroad · Admin workspace demo <span>Sample information only</span></footer>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-layer" id="modalLayer" hidden>
+    <section class="admin-modal" id="modalContent" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></section>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <script src="js/dashboard-data.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

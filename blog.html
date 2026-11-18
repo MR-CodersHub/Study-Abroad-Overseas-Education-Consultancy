@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore practical guidance, university insights, scholarship advice, and visa tips from Study Upbroad's international education experts." />
+  <title>Blog &amp; Knowledge Insights – Study Upbroad | Overseas Education Consultancy</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo/logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/logo/logo.png" />
+  <link rel="apple-touch-icon" href="assets/logo/logo.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/blog.css" />
+
+  <!-- Anti-FOUC: apply saved theme & direction before paint -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('sub_theme') || 'light';
+      var d = localStorage.getItem('sub_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.setAttribute('dir', d);
+      document.documentElement.setAttribute('lang', d === 'rtl' ? 'ar' : 'en');
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- =====================================================
+     NAVBAR — shared component
+     ===================================================== -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
+    <div class="container">
+
+      <!-- Brand Logo -->
+      <a class="navbar-brand" href="index.html" aria-label="Study Upbroad - Home">
+        <img class="brand-logo-icon" src="assets/logo/logo.png" alt="" width="48" height="48" />
+
+        <div class="brand-text">
+          <span class="brand-name">Study Upbroad</span>
+          <span class="brand-tagline">Global Education</span>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="navbar-toggler" type="button" id="navToggler" aria-controls="navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation menu">
+        <div class="hamburger-icon" id="hamburgerIcon">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
+      </button>
+
+      <!-- Collapsible Nav Menu -->
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+        <!-- Navigation Links -->
+        <ul class="navbar-nav mx-auto" role="list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="home2.html">Home 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Nav Footer (Auth Buttons) - only shown in mobile menu -->
+        <div class="mobile-nav-footer d-lg-none" role="group" aria-label="Authentication">
+          <a href="#" class="mobile-login-btn" role="button">Login</a>
+          <a href="#" class="mobile-signup-btn" role="button">Sign Up</a>
+          <a href="contact.html#consultation" class="mobile-consult-btn">Book Consultation</a>
+        </div>
+
+        <!-- Mobile Controls -->
+        <div class="mobile-controls d-lg-none" role="group" aria-label="Display controls">
+          <button class="nav-control-btn" id="mobileRtlToggle" aria-label="Toggle text direction" title="Toggle LTR/RTL">
+            <span class="rtl-btn-label" id="mobileRtlLabel">LTR</span>
+          </button>
+          <button class="nav-control-btn" id="mobileThemeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <!-- Sun icon -->
+            <svg id="mobileSunIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 001.061-1.06l-1.59-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 001.06 1.06l1.59-1.591a.75.75 0 00-1.061-1.06l-1.59 1.591z"/>
+            </svg>
+            <!-- Moon icon -->
+            <svg id="mobileMoonIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;" aria-hidden="true">
+              <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+        </div>
+
+      </div><!-- end navbarCollapse -->
+
+      <!-- Desktop Right-side Controls -->
+      <div class="navbar-controls d-none d-lg-flex" role="group" aria-label="Display controls">
+
+        <!-- RTL Toggle -->
+        <button class="nav-control-btn" id="rtlToggle" aria-label="Toggle text direction" title="Toggle LTR/RTL">
+          <span class="rtl-btn-label" id="rtlLabel">LTR</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="nav-control-btn" id="themeToggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+          <!-- Sun icon (light mode) -->
+          <svg id="sunIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.166 17.834a.75.75 0 00-1.06 1.06l1.59 1.591a.75.75 0 001.061-1.06l-1.59-1.591zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.166 6.166a.75.75 0 001.06 1.06l1.59-1.591a.75.75 0 00-1.061-1.06l-1.59 1.591z"/>
+          </svg>
+          <!-- Moon icon (dark mode) -->
+          <svg id="moonIcon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;" aria-hidden="true">
+            <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+
+        <!-- Profile Dropdown -->
+        <div class="profile-dropdown dropdown">
+          <button class="dropdown-toggle" id="profileDropdownBtn" data-bs-toggle="dropdown"
+            aria-expanded="false" aria-label="Profile menu" aria-haspopup="true">
+            <div class="profile-avatar">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+              </svg>
+            </div>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdownBtn">
+            <li>
+              <a class="dropdown-item dropdown-item-login" href="#" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M11 7L9.6 8.4l2.6 2.6H2v2h10.2l-2.6 2.6L11 17l5-5-5-5zm9 12h-8v2h8c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-8v2h8v14z"/>
+                </svg>
+                Login
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item dropdown-item-signup" href="#" role="menuitem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+                Sign Up
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <a href="contact.html#consultation" class="navbar-consult-btn" aria-label="Book a free consultation">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path
+              d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z" />
+          </svg>
+          <span>Book Consultation</span>
+        </a>
+
+      </div><!-- end navbar-controls -->
+
+    </div>
+  </nav>
+
+  <!-- =====================================================
+     MAIN CONTENT
+     ===================================================== -->
+  <main id="mainContent">
+
+    <!-- =====================================================
+       SECTION 1: BLOG HERO
+       ===================================================== -->
+    <section class="blog-hero" id="blogHeroSection" aria-labelledby="blogHeroTitle">
+      <img
+        class="blog-hero-bg"
+        src="https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&w=2000&q=80"
+        alt=""
+        width="2000"
+        height="1000"
+        loading="eager"
+        aria-hidden="true" />
+      <div class="blog-hero-overlay" aria-hidden="true"></div>
+
+      <div class="container blog-hero-inner">
+        <div class="row align-items-center">
+          <div class="col-lg-9 col-xl-8">
+            <span class="blog-hero-eyebrow">KNOWLEDGE &amp; INSIGHTS</span>
+            <h1 class="blog-hero-title" id="blogHeroTitle">
+              Insights to Help You <span class="blog-hero-title-accent">Move Forward.</span>
+            </h1>
+            <p class="blog-hero-desc">
+              Explore practical guidance, helpful insights, and important updates to make informed decisions throughout your international education journey.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 2: FEATURED ARTICLE SECTION
+       ===================================================== -->
+    <section class="blog-featured-section" id="featuredSection" aria-labelledby="featuredSectionHeading">
+      <div class="container">
+        <div class="d-none">
+          <h2 id="featuredSectionHeading">Featured Article</h2>
+        </div>
+
+        <div id="featuredBlogContainer">
+          <!-- Pre-rendered statically from blog-data.js (choosing-study-destination) -->
+          <article class="featured-card reveal">
+            <div class="featured-card-grid">
+              <div class="featured-card-media">
+                <img
+                  class="featured-card-img"
+                  src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80"
+                  alt="Historic university campus with students walking"
+                  width="800"
+                  height="500"
+                  loading="eager" />
+                <span class="featured-media-badge">Featured Article</span>
+              </div>
+              <div class="featured-card-content">
+                <span class="featured-category-badge">Study Destinations</span>
+                <h3 class="featured-card-title">
+                  <a href="blog-detail.html?blog=choosing-study-destination" class="text-decoration-none">
+                    How to Choose the Right Country for Your Higher Education
+                  </a>
+                </h3>
+                <p class="featured-card-excerpt">
+                  Explore the key factors to consider when comparing international study destinations, from academic opportunities to lifestyle and financial planning.
+                </p>
+                <div class="featured-meta-row">
+                  <div class="author-block">
+                    <img
+                      class="author-avatar"
+                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80"
+                      alt="Elena Rostova"
+                      width="44"
+                      height="44" />
+                    <div class="author-details">
+                      <span class="author-name">Elena Rostova</span>
+                      <span class="article-date-read">Nov 12, 2026 &bull; 6 min read</span>
+                    </div>
+                  </div>
+                  <a href="blog-detail.html?blog=choosing-study-destination" class="featured-cta-btn" aria-label="Read featured article: How to Choose the Right Country for Your Higher Education">
+                    <span>Read Article</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 3: SEARCH & FILTER AREA
+       ===================================================== -->
+    <section class="blog-filter-section" id="blogFilterSection" aria-labelledby="filterHeading">
+      <div class="container">
+        <div class="blog-filter-wrapper reveal">
+          <div class="row align-items-center mb-3">
+            <div class="col-lg-6 mb-3 mb-lg-0">
+              <h2 class="section-title fs-3 mb-1" id="filterHeading">Find the Information You Need.</h2>
+              <p class="text-secondary mb-0 small">Filter by topic or search directly across titles, tags, and guidance areas.</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="blog-search-box">
+                <svg class="blog-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input
+                  type="search"
+                  id="blogSearchInput"
+                  class="blog-search-input"
+                  placeholder="Search articles by title, keywords, or topics..."
+                  aria-label="Search articles"
+                  autocomplete="off" />
+                <button type="button" id="blogSearchClear" class="blog-search-clear d-none" aria-label="Clear search input">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category Navigation Tabs -->
+          <div class="blog-category-nav" id="blogCategoryNav" role="tablist" aria-label="Blog categories">
+            <button type="button" class="blog-filter-btn active" data-category="all" role="tab" aria-selected="true">
+              All Articles
+            </button>
+            <button type="button" class="blog-filter-btn" data-category="Study Destinations" role="tab" aria-selected="false">
+              Study Destinations
+            </button>
+            <button type="button" class="blog-filter-btn" data-category="University Admissions" role="tab" aria-selected="false">
+              University Admissions
+            </button>
+            <button type="button" class="blog-filter-btn" data-category="Scholarships &amp; Finance" role="tab" aria-selected="false">
+              Scholarships &amp; Finance
+            </button>
+            <button type="button" class="blog-filter-btn" data-category="Visa Guidance" role="tab" aria-selected="false">
+              Visa Guidance
+            </button>
+            <button type="button" class="blog-filter-btn" data-category="Student Life &amp; Preparation" role="tab" aria-selected="false">
+              Student Life &amp; Preparation
+            </button>
+          </div>
+
+          <!-- Active Filter & Count Bar -->
+          <div class="blog-results-bar" id="blogResultsBar">
+            <div class="results-text">
+              Showing <strong id="blogResultsCount" class="text-primary">6</strong> articles
+              <span id="activeFilterLabel" class="d-none"> in <span class="badge bg-light text-dark border ms-1" id="activeCategoryPill"></span></span>
+              <span id="activeSearchLabel" class="d-none"> matching "<span id="activeSearchQueryText" class="fst-italic"></span>"</span>
+            </div>
+            <button type="button" class="btn-reset-filters d-none" id="btnResetFilters">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+                <path d="M3 3v5h5"></path>
+              </svg>
+              <span>Reset Filters</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 4: BLOG ARTICLES GRID
+       ===================================================== -->
+    <section class="blog-listing-section" id="blogListingSection" aria-labelledby="listingHeading">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="section-eyebrow">CURATED ARTICLES</span>
+          <h2 class="section-title" id="listingHeading">Explore Our Latest Articles.</h2>
+          <p class="section-subtitle mx-auto">
+            Practical advice written by experienced international education advisors to support you at every milestone.
+          </p>
+        </div>
+
+        <!-- Dynamic Blog Cards Grid (Pre-rendered for zero-FOUC and hydration) -->
+        <div class="blog-grid" id="blogCardsGrid" aria-live="polite">
+
+          <!-- Card 1 -->
+          <article class="blog-card reveal delay-1" data-blog-id="choosing-study-destination" data-category="Study Destinations">
+            <div class="blog-card-media">
+              <img
+                class="blog-card-img"
+                src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=800&q=80"
+                alt="How to Choose the Right Country for Your Higher Education"
+                loading="lazy"
+                width="600"
+                height="375" />
+              <span class="blog-card-badge">Study Destinations</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta-top">
+                <span>Nov 12, 2026</span>
+                <span class="blog-card-meta-dot"></span>
+                <span>6 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-detail.html?blog=choosing-study-destination" class="text-decoration-none">
+                  How to Choose the Right Country for Your Higher Education
+                </a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Explore the key factors to consider when comparing international study destinations, from academic opportunities to lifestyle and financial planning.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-card-author-info">
+                  <img class="blog-card-author-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" width="32" height="32" />
+                  <span class="blog-card-author-name">Elena Rostova</span>
+                </div>
+                <a href="blog-detail.html?blog=choosing-study-destination" class="blog-read-link" aria-label="Read: How to Choose the Right Country for Your Higher Education">
+                  <span>Read More</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="blog-card reveal delay-2" data-blog-id="choosing-right-university" data-category="University Admissions">
+            <div class="blog-card-media">
+              <img
+                class="blog-card-img"
+                src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80"
+                alt="A Complete Guide to Choosing the Right University and Course"
+                loading="lazy"
+                width="600"
+                height="375" />
+              <span class="blog-card-badge">University Admissions</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta-top">
+                <span>Nov 08, 2026</span>
+                <span class="blog-card-meta-dot"></span>
+                <span>7 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-detail.html?blog=choosing-right-university" class="text-decoration-none">
+                  A Complete Guide to Choosing the Right University and Course
+                </a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Learn how to compare universities, understand course structures, review entry requirements, and create a shortlist that matches your future ambitions.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-card-author-info">
+                  <img class="blog-card-author-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" alt="Marcus Chen" width="32" height="32" />
+                  <span class="blog-card-author-name">Marcus Chen</span>
+                </div>
+                <a href="blog-detail.html?blog=choosing-right-university" class="blog-read-link" aria-label="Read: A Complete Guide to Choosing the Right University and Course">
+                  <span>Read More</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="blog-card reveal delay-3" data-blog-id="international-scholarships-guide" data-category="Scholarships &amp; Finance">
+            <div class="blog-card-media">
+              <img
+                class="blog-card-img"
+                src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80"
+                alt="Scholarships for International Students: What You Should Know"
+                loading="lazy"
+                width="600"
+                height="375" />
+              <span class="blog-card-badge">Scholarships &amp; Finance</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta-top">
+                <span>Nov 03, 2026</span>
+                <span class="blog-card-meta-dot"></span>
+                <span>8 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-detail.html?blog=international-scholarships-guide" class="text-decoration-none">
+                  Scholarships for International Students: What You Should Know
+                </a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Understand different scholarship opportunities, common eligibility requirements, and the financial considerations involved in studying abroad.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-card-author-info">
+                  <img class="blog-card-author-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" alt="Marcus Chen" width="32" height="32" />
+                  <span class="blog-card-author-name">Marcus Chen</span>
+                </div>
+                <a href="blog-detail.html?blog=international-scholarships-guide" class="blog-read-link" aria-label="Read: Scholarships for International Students: What You Should Know">
+                  <span>Read More</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="blog-card reveal delay-1" data-blog-id="strong-university-application" data-category="University Admissions">
+            <div class="blog-card-media">
+              <img
+                class="blog-card-img"
+                src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?auto=format&fit=crop&w=800&q=80"
+                alt="How to Prepare a Strong University Application"
+                loading="lazy"
+                width="600"
+                height="375" />
+              <span class="blog-card-badge">University Admissions</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta-top">
+                <span>Oct 28, 2026</span>
+                <span class="blog-card-meta-dot"></span>
+                <span>6 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-detail.html?blog=strong-university-application" class="text-decoration-none">
+                  How to Prepare a Strong University Application
+                </a>
+              </h3>
+              <p class="blog-card-excerpt">
+                From academic records to personal statements, discover the important elements involved in preparing a clear and complete university application.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-card-author-info">
+                  <img class="blog-card-author-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80" alt="Elena Rostova" width="32" height="32" />
+                  <span class="blog-card-author-name">Elena Rostova</span>
+                </div>
+                <a href="blog-detail.html?blog=strong-university-application" class="blog-read-link" aria-label="Read: How to Prepare a Strong University Application">
+                  <span>Read More</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="blog-card reveal delay-2" data-blog-id="student-visa-preparation-guide" data-category="Visa Guidance">
+            <div class="blog-card-media">
+              <img
+                class="blog-card-img"
+                src="https://images.unsplash.com/photo-1569154941061-e231b4725ef1?auto=format&fit=crop&w=800&q=80"
+                alt="Student Visa Preparation: A Step-by-Step Guide"
+                loading="lazy"
+                width="600"
+                height="375" />
+              <span class="blog-card-badge">Visa Guidance</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta-top">
+                <span>Oct 20, 2026</span>
+                <span class="blog-card-meta-dot"></span>
+                <span>7 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-detail.html?blog=student-visa-preparation-guide" class="text-decoration-none">
+                  Student Visa Preparation: A Step-by-Step Guide
+                </a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Understand the important stages of student visa preparation, documentation, application requirements, and interview readiness.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-card-author-info">
+                  <img class="blog-card-author-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Sarah Jenkins" width="32" height="32" />
+                  <span class="blog-card-author-name">Sarah Jenkins</span>
+                </div>
+                <a href="blog-detail.html?blog=student-visa-preparation-guide" class="blog-read-link" aria-label="Read: Student Visa Preparation: A Step-by-Step Guide">
+                  <span>Read More</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="blog-card reveal delay-3" data-blog-id="pre-departure-checklist" data-category="Student Life &amp; Preparation">
+            <div class="blog-card-media">
+              <img
+                class="blog-card-img"
+                src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=800&q=80"
+                alt="Preparing for Life Abroad: Your Essential Pre-Departure Checklist"
+                loading="lazy"
+                width="600"
+                height="375" />
+              <span class="blog-card-badge">Student Life &amp; Preparation</span>
+            </div>
+            <div class="blog-card-body">
+              <div class="blog-card-meta-top">
+                <span>Oct 14, 2026</span>
+                <span class="blog-card-meta-dot"></span>
+                <span>6 min read</span>
+              </div>
+              <h3 class="blog-card-title">
+                <a href="blog-detail.html?blog=pre-departure-checklist" class="text-decoration-none">
+                  Preparing for Life Abroad: Your Essential Pre-Departure Checklist
+                </a>
+              </h3>
+              <p class="blog-card-excerpt">
+                Get ready for your international education experience with practical guidance on travel documents, accommodation, packing, and settling into a new environment.
+              </p>
+              <div class="blog-card-footer">
+                <div class="blog-card-author-info">
+                  <img class="blog-card-author-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80" alt="Sarah Jenkins" width="32" height="32" />
+                  <span class="blog-card-author-name">Sarah Jenkins</span>
+                </div>
+                <a href="blog-detail.html?blog=pre-departure-checklist" class="blog-read-link" aria-label="Read: Preparing for Life Abroad: Your Essential Pre-Departure Checklist">
+                  <span>Read More</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty State Container (Initially hidden) -->
+        <div class="blog-empty-state d-none" id="blogEmptyState" role="region" aria-label="No articles found">
+          <div class="empty-state-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              <line x1="8" y1="11" x2="14" y2="11"></line>
+            </svg>
+          </div>
+          <h3 class="empty-state-title">No Matching Articles Found</h3>
+          <p class="empty-state-text">
+            We couldn't find any articles matching your search criteria. Try modifying your search keywords or clearing the category filter.
+          </p>
+          <button type="button" class="btn-primary-brand" id="btnEmptyReset">View All Articles</button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+       SECTION 5: NEWSLETTER / BLOG CTA
+       ===================================================== -->
+    <section class="blog-newsletter-section" id="blogNewsletterSection" aria-labelledby="newsletterHeading">
+      <div class="container">
+        <div class="blog-newsletter-card text-center reveal">
+          <div class="newsletter-decor-circle" aria-hidden="true"></div>
+          <span class="section-eyebrow text-white opacity-75">STAY CONNECTED</span>
+          <h2 class="blog-newsletter-title" id="newsletterHeading">Stay Informed. Plan With Confidence.</h2>
+          <p class="blog-newsletter-desc">
+            Explore helpful international education insights and stay informed as you prepare for your next academic step.
+          </p>
+          <form class="blog-newsletter-form" id="blogNewsletterForm" novalidate>
+            <div class="blog-newsletter-input-group">
+              <input
+                type="email"
+                class="blog-newsletter-input"
+                id="blogNewsletterEmail"
+                placeholder="Enter your student email address..."
+                aria-label="Email address for education insights"
+                required />
+              <button type="submit" class="blog-newsletter-submit-btn" id="blogNewsletterBtn">Subscribe</button>
+            </div>
+            <div class="blog-newsletter-feedback text-white" id="blogNewsletterFeedback" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+     FOOTER — shared component
+     ===================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Brand Column -->
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand">
+            <div class="footer-brand-lockup">
+              <img class="brand-logo-icon footer-brand-logo" src="assets/logo/logo.png" alt="" width="48" height="48" />
+              <div>
+                <div class="brand-name">Study Upbroad</div>
+                <div class="brand-tagline">Global Education Consultancy</div>
+              </div>
+            </div>
+          </div>
+          <p class="footer-brand-desc">
+            Your trusted partner in international education. We guide students from first dream to final destination across 25+ study destinations worldwide.
+          </p>
+
+          <!-- Social Icons -->
+          <div class="footer-social" role="list" aria-label="Social media links">
+            <a href="#" class="social-icon-link" aria-label="Follow us on Facebook" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Follow us on Instagram" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Follow us on LinkedIn" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Follow us on YouTube" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Follow us on Twitter/X" role="listitem">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="index.html" role="listitem">Home 1</a></li>
+            <li><a href="home2.html" role="listitem">Home 2</a></li>
+            <li><a href="about.html" role="listitem">About Us</a></li>
+            <li><a href="services.html" role="listitem">Our Services</a></li>
+            <li><a href="pricing.html" role="listitem">Pricing</a></li>
+            <li><a href="blog.html" role="listitem">Blog</a></li>
+            <li><a href="contact.html" role="listitem">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Study Destinations -->
+        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+          <h3 class="footer-heading">Destinations</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" role="listitem">United Kingdom</a></li>
+            <li><a href="#" role="listitem">United States</a></li>
+            <li><a href="#" role="listitem">Canada</a></li>
+            <li><a href="#" role="listitem">Australia</a></li>
+            <li><a href="#" role="listitem">Germany</a></li>
+            <li><a href="#" role="listitem">Ireland</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+          <h3 class="footer-heading">Our Services</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="service-details.html?service=career-profile-evaluation" role="listitem">Profile Evaluation</a></li>
+            <li><a href="service-details.html?service=university-course-selection" role="listitem">University Selection</a></li>
+            <li><a href="service-details.html?service=admission-application-assistance" role="listitem">Application Support</a></li>
+            <li><a href="service-details.html?service=scholarship-financial-guidance" role="listitem">Scholarship Guidance</a></li>
+            <li><a href="service-details.html?service=visa-guidance-assistance" role="listitem">Visa Assistance</a></li>
+            <li><a href="service-details.html?service=pre-departure-student-support" role="listitem">Pre-Departure Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact + Information -->
+        <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+          <h3 class="footer-heading">Contact</h3>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <strong>Address</strong>
+              123 Education Lane, City
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <strong>Email</strong>
+              hello@studyupbroad.com
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div class="footer-contact-icon">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+            </div>
+            <div class="footer-contact-text">
+              <strong>Phone</strong>
+              +1 (800) 123-4567
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end row -->
+
+      <!-- Newsletter - Full Width Row -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="newsletter-section">
+            <div class="row align-items-center g-3">
+              <div class="col-lg-5">
+                <h4 class="footer-heading" style="margin-bottom: 0.5rem;">Stay Informed</h4>
+                <p class="newsletter-desc mb-0">
+                  Get the latest study abroad opportunities, scholarship alerts, and education tips straight to your inbox.
+                </p>
+              </div>
+              <div class="col-lg-7">
+                <form id="newsletterForm" class="newsletter-form" novalidate aria-label="Newsletter subscription">
+                  <div class="input-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="newsletterEmail"
+                      placeholder="Enter your email address"
+                      aria-label="Email address"
+                      required
+                    />
+                    <button class="newsletter-submit-btn" type="submit" id="newsletterSubmitBtn">
+                      Subscribe
+                    </button>
+                  </div>
+                  <div class="newsletter-message" id="newsletterMessage" role="alert" aria-live="polite"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="footer-bottom-text mb-0">
+              &copy; <span id="footerYear">2026</span> Study Upbroad. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="footer-bottom-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms &amp; Conditions</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end container -->
+  </footer>
+
+  <!-- =====================================================
+     SCRIPTS
+     ===================================================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/blog-data.js"></script>
+  <script src="js/blog.js"></script>
+
+</body>
+
+</html>
